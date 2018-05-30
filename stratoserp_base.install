@@ -1,0 +1,30 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the stratoserp_base installation profile.
+ */
+
+use Drupal\user\Entity\User;
+use Drupal\Core\Config\FileStorage;
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function stratoserp_base_install() {
+  // Allow visitor account creation with administrative approval.
+  $user_settings = \Drupal::configFactory()->getEditable('user.settings');
+  $user_settings->set('register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)->save(TRUE);
+
+  // Assign user names/roles.
+  $user = User::load(0);
+  $user->name->value = 'anonymous';
+  $user->save();
+
+  $user = User::load(1);
+  $user->roles = [ 'administrator', 'developer' ];
+  $user->save();
+}
