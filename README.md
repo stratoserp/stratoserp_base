@@ -1,0 +1,1 @@
+# stratoserp-base
