@@ -28,6 +28,6 @@
     "drupal/themable_forms":                             "1.*@dev",
     "drupal/views_data_export":                          "1.x-dev",
     "drupal/webform":                                    "5.*@dev",
-    "drupal/webform_composite":                          "1.*@dev",
+    "drupal/webform_composite":                          "1.*@dev"
   }
 }
