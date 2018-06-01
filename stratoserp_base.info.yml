@@ -47,6 +47,7 @@ dependencies:
   - calendar
   - entity_reference_revisions
   - eva
+  - field_group
   - formtips
   - fullcalendar
   - fullcalendar_view

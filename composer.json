@@ -10,6 +10,7 @@
     "drupal/calendar":                                   "1.*@dev",
     "drupal/entity_reference_revisions":                 "1.*@dev",
     "drupal/eva":                                        "1.*",
+    "drupal/field_group":                                "3.x-dev",
     "drupal/formtips":                                   "1.*@dev",
     "drupal/fullcalendar_view":                          "2.x-dev",
     "drupal/geolocation":                                "1.*@dev",
