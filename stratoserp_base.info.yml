@@ -49,7 +49,6 @@ dependencies:
   - eva
   - field_group
   - formtips
-  - fullcalendar
   - fullcalendar_view
   - geolocation
   - libraries
