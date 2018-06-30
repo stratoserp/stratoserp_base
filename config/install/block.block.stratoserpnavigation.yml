@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   module:
-    - user
+    - se_core
   theme:
     - stratoserp_theme
-id: stratos_userlogin
+id: stratoserpnavigation
 theme: stratoserp_theme
 region: content
-weight: -2
+weight: -4
 provider: null
-plugin: user_login_block
+plugin: navigation_block
 settings:
-  id: user_login_block
-  label: 'User login'
-  provider: user
+  id: navigation_block
+  label: 'Stratos ERP Navigation'
+  provider: se_core
   label_display: visible
 visibility: {  }

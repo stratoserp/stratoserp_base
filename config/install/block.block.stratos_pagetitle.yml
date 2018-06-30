@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - stratos
+    - stratoserp_theme
 id: stratos_pagetitle
-theme: stratos
+theme: stratoserp_theme
 region: header
 weight: -2
 provider: null

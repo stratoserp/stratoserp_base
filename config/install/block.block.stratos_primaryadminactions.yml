@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - stratos
+    - stratoserp_theme
 id: stratos_primaryadminactions
-theme: stratos
+theme: stratoserp_theme
 region: content
-weight: -2
+weight: -1
 provider: null
 plugin: local_actions_block
 settings:

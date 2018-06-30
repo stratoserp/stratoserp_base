@@ -89,5 +89,4 @@ dependencies:
 themes:
   - bartik
   - seven
-  - stratos
-  - stratos_material
+  - stratoserp_theme

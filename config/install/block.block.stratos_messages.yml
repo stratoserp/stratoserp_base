@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - stratos
+    - stratoserp_theme
 id: stratos_messages
-theme: stratos
+theme: stratoserp_theme
 region: highlighted
 weight: 0
 provider: null

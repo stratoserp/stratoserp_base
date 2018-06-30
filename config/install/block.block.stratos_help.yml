@@ -4,9 +4,9 @@ dependencies:
   module:
     - help
   theme:
-    - stratos
+    - stratoserp_theme
 id: stratos_help
-theme: stratos
+theme: stratoserp_theme
 region: help
 weight: 0
 provider: null

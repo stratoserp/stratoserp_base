@@ -4,9 +4,9 @@ dependencies:
   module:
     - responsive_menu
   theme:
-    - stratos
+    - stratoserp_theme
 id: horizontalmenu_2
-theme: stratos
+theme: stratoserp_theme
 region: navigation
 weight: 0
 provider: null

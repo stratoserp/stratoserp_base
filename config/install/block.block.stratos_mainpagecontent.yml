@@ -4,11 +4,11 @@ dependencies:
   module:
     - system
   theme:
-    - stratos
+    - stratoserp_theme
 id: stratos_mainpagecontent
-theme: stratos
+theme: stratoserp_theme
 region: content
-weight: -1
+weight: 0
 provider: null
 plugin: system_main_block
 settings:
