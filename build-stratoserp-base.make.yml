@@ -2,18 +2,17 @@ core: 8.x
 api: 2
 projects:
   drupal:
-    subdir: web
     type: core
     download:
       type: git
       url: 'https://github.com/drupal/core.git'
       branch: "8.7.x-dev"
       revision: 66f36c39709a6b399d21b8128b56f162060bebfb
-    patch:
-      - 'https://drupal.org/files/issues/2018-08-26/2991772-9.patch'
-      - 'https://drupal.org/files/issues/2018-07-02/2902311-16.patch'
+#    patch:
+#      - 'https://drupal.org/files/issues/2018-08-26/2991772-9.patch'
+#      - 'https://drupal.org/files/issues/2018-07-02/2902311-16.patch'
   calendar:
-    subdir: web/contrib
+    subdir: contrib
     type: module
     download:
       type: git
@@ -21,7 +20,7 @@ projects:
       branch: "8.x-1.x"
       revision: 1ef5b86b11bf69641cc6539bcc93f73e7afb8ebf
   duration_field:
-    subdir: web/contrib
+    subdir: contrib
     type: module
     download:
       type: git
@@ -30,21 +29,21 @@ projects:
     patch:
       - 'https://drupal.org/files/issues/2018-12-14/3020676-6.duration_date_increment.full_.patch'
   entity_reference_revisions:
-    subdir: web/contrib
+    subdir: contrib
     type: module
     download:
       type: git
       url: 'https://git.drupal.org/project/entity_reference_revisions'
       branch: "8.x-1.x"
   eva:
-    subdir: web/contrib
+    subdir: contrib
     type: module
     download:
       type: git
       url: 'https://git.drupal.org/project/eva'
       branch: "8.x-2.x"
   field_group:
-    subdir: web/contrib
+    subdir: contrib
     type: module
     download:
       type: git
@@ -52,14 +51,14 @@ projects:
       branch: "8.x-3.x"
       revision: c7b3194f0655eb9c0b37d9a0dd1b36f6e40b4c94
   geolocation:
-    subdir: web/contrib
+    subdir: contrib
     type: module
     download:
       type: git
       url: 'https://git.drupal.org/project/geolocation'
       branch: "8.x-1.x"
   paragraphs:
-    subdir: web/contrib
+    subdir: contrib
     type: module
     download:
       type: git
@@ -69,14 +68,14 @@ projects:
     patch:
       - 'https://drupal.org/files/issues/2018-11-01/paragraphs-field_layout_support-2991540-7.patch'
   reference_table_formatter:
-    subdir: web/contrib
+    subdir: contrib
     type: module
     download:
       type: git
       url: 'https://git.drupal.org/project/reference_table_formatter'
       branch: "8.x-1.x"
   serial:
-    subdir: web/contrib
+    subdir: contrib
     type: module
     download:
       type: git
@@ -89,23 +88,23 @@ projects:
       - 'https://drupal.org/files/issues/entity-2856512-5.patch'
       - 'https://drupal.org/files/issues/2868303-fix-bundle-key.patch'
   views_data_export:
-    subdir: web/contrib
+    subdir: contrib
     type: module
     download:
       type: git
       url: 'https://git.drupal.org/project/views_data_export'
       branch: "8.x-1.x"
-    patch:
-      - 'https://drupal.org/files/issues/2018-08-16/2789531-144.patch'
+#    patch:
+#      - 'https://drupal.org/files/issues/2018-08-16/2789531-144.patch'
   views_templates:
-    subdir: web/contrib
+    subdir: contrib
     type: module
     download:
       type: git
       url: 'https://git.drupal.org/project/views_templates'
       branch: "8.x-1.x"
   xero:
-    subdir: web/contrib
+    subdir: contrib
     type: module
     download:
       type: git
