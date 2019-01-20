@@ -1,33 +1,56 @@
 {
   "name": "singularo/stratoserp_base",
-  "type": "drupal-profile",
   "description": "StratosERP installation profile",
+  "type": "drupal-profile",
   "homepage": "https://github.com/singularo/stratoserp_base",
   "license": "GPL-2.0+",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
   "require": {
-    "drupal/addtocalendar":                              "3.*@dev",
-    "drupal/admin_toolbar":                              "1.*@dev",
-    "drupal/calendar":                                   "1.*@dev",
-    "drupal/entity_reference_revisions":                 "1.*@dev",
-    "drupal/eva":                                        "1.*",
-    "drupal/field_group":                                "3.x-dev",
-    "drupal/formtips":                                   "1.*@dev",
-    "drupal/fullcalendar_view":                          "2.x-dev",
-    "drupal/geolocation":                                "1.*@dev",
-    "drupal/libraries":                                  "3.*@dev",
-    "drupal/linkit":                                     "5.*@dev",
-    "drupal/log_stdout":                                 "1.*@dev",
-    "drupal/multiple_fields_remove_button":              "1.*@dev",
-    "drupal/paragraphs":                                 "1.x-dev",
-    "drupal/redis":                                      "1.*@dev",
-    "drupal/reference_table_formatter":                  "1.*@dev",
-    "drupal/responsive_menu":                            "2.*@dev",
-    "drupal/serial":                                     "1.x-dev",
-    "drupal/simplify":                                   "1.*@dev",
-    "drupal/token":                                      "1.*@dev",
-    "drupal/themable_forms":                             "1.*@dev",
-    "drupal/views_data_export":                          "1.x-dev",
-    "drupal/webform":                                    "5.*@dev",
-    "drupal/webform_composite":                          "1.*@dev"
+    "drupal/calendar": "1.*@dev",
+    "drupal/core": "8.7.*",
+    "drupal/duration_field": "2.*@dev",
+    "drupal/entity_reference_revisions": "1.*@dev",
+    "drupal/eva": "^2.0",
+    "drupal/field_group": "3.x-dev",
+    "drupal/geolocation": "1.*@dev",
+    "drupal/paragraphs": "1.x-dev",
+    "drupal/reference_table_formatter": "1.*@dev",
+    "drupal/serial": "1.*@dev",
+    "drupal/views_data_export": "1.*@dev",
+    "drupal/views_templates": "1.*@dev",
+    "drupal/xero": "1.*@dev",
+    "drush/drush": "8.*"
+  },
+  "minimum-stability": "dev",
+  "config": {
+    "bin-dir": "bin/",
+    "discard-changes": true
+  },
+  "extra": {
+    "installer-paths": {
+      "web/core": [
+        "type:drupal-core"
+      ],
+      "web/libraries/{$name}": [
+        "type:drupal-library"
+      ],
+      "web/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "web/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "web/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "drush/contrib/{$name}": [
+        "type:drupal-drush"
+      ]
+    }
   }
 }

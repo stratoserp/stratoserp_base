@@ -1,0 +1,112 @@
+core: 8.x
+api: 2
+defaults:
+  projects:
+    subdir: contrib
+projects:
+  drupal:
+    type: core
+    download:
+      type: git
+      url: 'https://github.com/drupal/core.git'
+      branch: 8.7.x-dev
+      revision: 66f36c39709a6b399d21b8128b56f162060bebfb
+    patch:
+      - 'https://www.drupal.org/files/issues/2018-08-26/2991772-9.patch'
+      - 'https://www.drupal.org/files/issues/2018-07-02/2902311-16.patch'
+  calendar:
+    type: module
+    download:
+      type: git
+      url: 'https://git.drupal.org/project/calendar'
+      branch: 1.x
+      revision: 1ef5b86b11bf69641cc6539bcc93f73e7afb8ebf
+  duration_field:
+    type: module
+    download:
+      type: git
+      url: 'https://git.drupal.org/project/duration_field'
+      tag: 2.x-0.0-rc2
+    patch:
+      - 'https://www.drupal.org/files/issues/2018-12-14/3020676-6.duration_date_increment.full_.patch'
+  entity_reference_revisions:
+    type: module
+    download:
+      type: git
+      url: 'https://git.drupal.org/project/entity_reference_revisions'
+      tag: 1.x-6.0
+  eva:
+    type: module
+    download:
+      type: git
+      url: 'https://git.drupal.org/project/eva'
+      tag: 2.x-0.0-rc1
+  field_group:
+    type: module
+    download:
+      type: git
+      url: 'https://git.drupal.org/project/field_group'
+      branch: 3.x
+      revision: c7b3194f0655eb9c0b37d9a0dd1b36f6e40b4c94
+  geolocation:
+    type: module
+    download:
+      type: git
+      url: 'https://git.drupal.org/project/geolocation'
+      tag: 1.x-11.0
+  paragraphs:
+    type: module
+    download:
+      type: git
+      url: 'https://git.drupal.org/project/paragraphs'
+      branch: 1.x
+      revision: d2eee2d16408bb1d2513dd4db029f67dd3c928dd
+    patch:
+      - 'https://www.drupal.org/files/issues/2018-11-01/paragraphs-field_layout_support-2991540-7.patch'
+  reference_table_formatter:
+    type: module
+    download:
+      type: git
+      url: 'https://git.drupal.org/project/reference_table_formatter'
+      tag: 1.x-0.0-rc4
+  serial:
+    type: module
+    download:
+      type: git
+      url: 'https://git.drupal.org/project/serial'
+      branch: 1.x
+      revision: dec612677421de50cb5eb50dcafb04151f2e8890
+    patch:
+      - 'https://drupal.org/files/issues/2946075-2.serial.Support-migrating-existing-values.patch'
+      - 'https://drupal.org/files/issues/2018-06-02/2977055-2.patch'
+      - 'https://drupal.org/files/issues/entity-2856512-5.patch'
+      - 'https://drupal.org/files/issues/2868303-fix-bundle-key.patch'
+  views_data_export:
+    type: module
+    download:
+      type: git
+      url: 'https://git.drupal.org/project/views_data_export'
+      tag: 1.x-0.0-beta1
+    patch:
+      - 'https://drupal.org/files/issues/2018-08-16/2789531-144.patch'
+  views_templates:
+    type: module
+    download:
+      type: git
+      url: 'https://git.drupal.org/project/views_templates'
+      tag: 1.x-0.0-alpha1
+  xero:
+    type: module
+    download:
+      type: git
+      url: 'https://git.drupal.org/project/xero'
+      branch: 1.x
+      revision: 73f718851a1a5bcb2ab91b966f8cac53c5aadf41
+libraries:
+  drush/drush:
+    type: library
+    download:
+      type: git
+      url: 'https://github.com/drush-ops/drush.git'
+      branch: 9.5.2
+      revision: 17f0106706391675a281c6d212850853bdbe90f9

@@ -1,0 +1,10 @@
+api: '2'
+core: 8.x
+projects:
+  drupal:
+    type: core
+    version: 8.6.7
+    patch:
+      2991772: 'https://www.drupal.org/files/issues/2018-08-26/2991772-9.patch'
+      2902311: 'https://www.drupal.org/files/issues/2018-07-02/2902311-16.patch'
+

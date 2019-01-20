@@ -1,0 +1,15 @@
+api: '2'
+core: 8.x
+defaults:
+  projects:
+    subdir: contrib
+projects:
+  stratoserp:
+    subdir: stratoserp
+    type: module
+    download:
+      type: git
+      branch: 8.x-1.x
+      url: 'https://git.drupal.org/project/stratoserp.git'
+      revision: bd3a5fca293cb60275aa47e0bcf4b6cb930b4c15
+
