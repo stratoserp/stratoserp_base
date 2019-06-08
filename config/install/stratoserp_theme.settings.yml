@@ -1,0 +1,32 @@
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://shop8.172.17.0.1.xip.io:8080/themes/custom/stratoserp_theme/favicon.ico'
+  use_default: true
+schemas:
+  bootstrap: 8000
+  stratos: 8000
+  stratoserp_theme: 8000
+navbar_position: ''
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  footer: ''
+fluid_container: 1
+table_responsive: '-1'
+table: ''
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: ''
+  url: ''
+  use_default: true

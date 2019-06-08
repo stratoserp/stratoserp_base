@@ -4,9 +4,16 @@ dependencies:
   config:
     - core.entity_view_mode.user.compact
     - field.field.user.user.user_picture
+    - image.style.thumbnail
   module:
+    - field_layout
     - image
+    - layout_discovery
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: user.user.compact
 targetEntityType: user
 bundle: user
@@ -20,5 +27,11 @@ content:
       image_link: content
     third_party_settings: {  }
     label: hidden
+    region: content
 hidden:
+  extra_field_invoice_statistics_user: true
+  extra_field_quote_statistics_user: true
+  extra_field_ticket_statistics_user: true
+  extra_field_timekeeping_statistics_user: true
   member_for: true
+  realname: true

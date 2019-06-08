@@ -6,7 +6,7 @@ dependencies:
 id: stratos_pagetitle
 theme: stratoserp_theme
 region: header
-weight: -2
+weight: -3
 provider: null
 plugin: page_title_block
 settings:
