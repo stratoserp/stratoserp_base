@@ -4,7 +4,7 @@ description: 'StratosERP base install.'
 version: VERSION
 core: 8.x
 dependencies:
-  - big_pipe
+  - action
   - block
   - block_content
   - breakpoint
@@ -15,7 +15,6 @@ dependencies:
   - contact
   - datetime
   - datetime_range
-  - dynamic_page_cache
   - editor
   - entity_reference
   - field_layout
@@ -30,7 +29,6 @@ dependencies:
   - node
   - options
   - path
-  - page_cache
   - search
   - taxonomy
   - telephone
@@ -41,50 +39,74 @@ dependencies:
   - views_ui
 
   # Contrib modules
-  - addtocalendar
-  - admin_toolbar
-  - admin_toolbar_tools
-  - calendar
+  - chartjs_api
+  - chosen
+  - chosen_field
+  - drush_cmi_tools
+  - duration_field
+  - dynamic_entity_reference
   - entity_reference_revisions
   - eva
+  - extra_field
+  - facets
   - field_group
-  - formtips
+  - flat_comments
   - fullcalendar_view
   - geolocation
+  - hook_event_dispatcher
+  - json_field
   - libraries
   - linkit
   - log_stdout
   - multiple_fields_remove_button
+  - nice_menus
   - paragraphs
-  - redis
+  - pdf_api
+  - printable
+  - realname
   - reference_table_formatter
-  - responsive_menu
   - serial
   - simplify
   - token
-  - themable_forms
+  - tvi
+  - views_bulk_operations
   - views_data_export
   - webform
   - webform_ui
 
   # Stratos ERP
+  - se_accounting
   - se_bill
   - se_contact
   - se_core
   - se_customer
-  - se_document
   - se_goods_receipt
   - se_invoice
   - se_item
-  - se_items
   - se_payment
-  - se_payments
   - se_purchase_order
   - se_quote
-  - se_stock_item
   - se_supplier
   - se_ticket
   - se_timekeeping
+
+  # Document types
+  - se_information
+  - se_document
+  - se_subscription
+
+  # Item types
+  - se_assembly
+  - se_service
+  - se_stock
+  - se_recurring
+
+  # Paragraph types
+  - se_items
+  - se_payments
+
+  # Integrations
+  - se_xero
 
 themes:
   - bartik

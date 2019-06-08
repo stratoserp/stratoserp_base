@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - nice_menus
+  theme:
+    - stratoserp_theme
+id: nicemenus
+theme: stratoserp_theme
+region: header
+weight: -4
+provider: null
+plugin: nice_menus_block
+settings:
+  id: nice_menus_block
+  label: ''
+  provider: nice_menus
+  label_display: visible
+  nice_menus_name: ''
+  nice_menus_menu: 'stratos-erp:'
+  nice_menus_depth: '-1'
+  nice_menus_type: down
+  nice_menus_respect_expand: '1'
+visibility: {  }
