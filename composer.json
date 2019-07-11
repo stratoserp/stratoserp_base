@@ -14,7 +14,7 @@
         "composer-plugin-api": "^1.0",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "~1.0",
-        "drupal/chartjs_api": "1.x-dev",
+        "drupal/chartjs_api": "dev-1.x",
         "drupal/chosen": "^2.7",
         "drupal/core": "^8.7",
         "drupal/drush-cmi-tools": "dev-8.x-2.x",
@@ -24,7 +24,7 @@
         "drupal/extra_field": "^1.0",
         "drupal/eva": "^2.0",
         "drupal/facets": "^1.3",
-        "drupal/field_group": "3.x-dev",
+        "drupal/field_group": "dev-3.x",
         "drupal/flat_comments": "dev-master",
         "drupal/fullcalendar_view": "2.*@dev",
         "drupal/geolocation": "1.*@dev",
@@ -35,26 +35,25 @@
         "drupal/log_stdout": "1.*@dev",
         "drupal/multiple_fields_remove_button": "1.*@dev",
         "drupal/nice_menus": "^1.0@beta",
-        "drupal/paragraphs": "1.x-dev",
         "drupal/pathauto": "1.*",
         "drupal/pdf_api": "^1.0",
-        "drupal/printable": "1.x-dev",
+        "drupal/printable": "dev-1.x",
         "drupal/realname": "^1.0",
         "drupal/reference_table_formatter": "1.*@dev",
         "drupal/search_api": "^1.12",
-        "drupal/serial": "1.x-dev",
+        "drupal/serial": "dev-1.x",
         "drupal/simplify": "1.*@dev",
         "drupal/themable_forms": "1.*@dev",
         "drupal/token": "1.*",
         "drupal/tvi": "^1.0@beta",
         "drupal/twig_tweak": "2.*",
-        "drupal/views_aggregator": "1.x-dev",
+        "drupal/views_aggregator": "dev-1.x",
         "drupal/views_bulk_operations": "^2.5",
         "drupal/views_data_export": "1.*@dev",
         "drupal/webform": "5.*@dev",
         "drupal/webform_extra_field": "^1.0@alpha",
         "drupal/webform_views": "^5.0@alpha",
-        "drupal/xero": "1.*@dev",
+        "drupal/xero": "dev-1.x",
         "drupal/bootstrap": "3.*@dev",
         "drush/drush": "^9.6",
         "ext-json": "*",
@@ -107,6 +106,15 @@
                 "type:drupal-drush"
             ]
         },
+        "drupal-scaffold": {
+             "initial": {
+                 "sites/default/default.services.yml": "sites/default/services.yml",
+                 "sites/default/default.settings.php": "sites/default/settings.php"
+             }
+        },
+        "preserve-paths": [
+            "web/sites"
+        ],
         "composer-exit-on-patch-failure": true,
         "patches": {
             "drupal/chartjs_api": {
@@ -116,9 +124,11 @@
                 "Chosen field should force height to auto": "https://www.drupal.org/files/issues/Issue-2839655-by-hass-Chosen-field-should-force-heig.patch"
             },
             "drupal/core": {
-                "Field layouts don't seem to work for embedded forms": "./patches/2991772-13.patch",
                 "Add __toString to the entity Query class": "https://www.drupal.org/files/issues/2018-07-02/2902311-16.patch",
                 "Migrate exceptions need line details": "https://www.drupal.org/files/issues/2018-05-04/2969551.drupal.migrate-exceptions-missing-file-line.patch"
+            },
+            "drupal/duration_field": {
+              "Support the #date_increment property in the 'duration' form element": "https://www.drupal.org/files/issues/2018-12-14/3020676-6.duration_date_increment.full_.patch"
             },
             "drupal/dynamic_entity_reference": {
                 "Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch",
@@ -126,9 +136,6 @@
             },
             "drupal/extra_field": {
                 "Allow form extra fields to be declared through ExtraField plugins": "https://www.drupal.org/files/issues/2019-01-17/extra_field-using_in_forms-2882061-24.patch"
-            },
-            "drupal/paragraphs": {
-                "Apply layouts to the paragraphs form widget": "https://www.drupal.org/files/issues/2018-11-01/paragraphs-field_layout_support-2991540-7.patch"
             },
             "drupal/pdf_api": {
                 "Set MPDF generation directory to drupals tmp directory": "https://www.drupal.org/files/issues/2019-01-31/tmp-directory-3016161-4.patch"
