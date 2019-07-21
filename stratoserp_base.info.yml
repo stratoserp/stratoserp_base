@@ -78,6 +78,7 @@ dependencies:
 
   # Stratos ERP
   - se_accounting
+  - se_basic_setup
   - se_bill
   - se_contact
   - se_core
@@ -89,6 +90,7 @@ dependencies:
   - se_payment_line
   - se_purchase_order
   - se_quote
+  - se_report
   - se_supplier
   - se_ticket
   - se_timekeeping
@@ -108,6 +110,5 @@ dependencies:
   - se_xero
 
 themes:
-  - bartik
   - seven
   - stratoserp_theme
