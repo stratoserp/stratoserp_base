@@ -41,6 +41,8 @@ dependencies:
   - views_ui
 
   # Contrib modules
+  - admin_toolbar
+  - admin_toolbar_tools
   - chartjs_api
   - chosen
   - chosen_field
@@ -98,7 +100,13 @@ dependencies:
   # Document types
   - se_information
   - se_document
+
+  # Subscription types
   - se_subscription
+  - se_domain_hosting
+  - se_domain_name
+  - se_email_account
+  - se_managed_service
 
   # Item types
   - se_assembly
