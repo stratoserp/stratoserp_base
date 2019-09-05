@@ -68,6 +68,7 @@ dependencies:
   - nice_menus
   - pdf_api
   - printable
+  - r4032login
   - realname
   - serial
   - simplify
