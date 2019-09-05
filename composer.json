@@ -45,6 +45,7 @@
         "drupal/pathauto": "1.*",
         "drupal/pdf_api": "^1.0",
         "drupal/printable": "dev-1.x",
+        "drupal/r4032login": "^1.1",
         "drupal/realname": "^1.0",
         "drupal/reference_table_formatter": "1.*@dev",
         "drupal/search_api": "^1.12",
