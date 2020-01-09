@@ -11,8 +11,6 @@
         { "type": "vcs", "url": "https://github.com/singularo/flat_comments.git" }
     ],
     "require": {
-        "ext-json": "*",
-        "ext-mbstring": "^7.2",
         "composer-plugin-api": "^1.0",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "~1.0",
@@ -22,12 +20,11 @@
         "drupal/chosen": "^2.7",
         "drupal/ckeditor_mentions": "1.*@dev",
         "drupal/ckeditorheight": "dev-1.x",
-        "drupal/core": "^8.7",
+        "drupal/core": "^8.8",
         "drupal/date_popup": "^1.0",
-        "drupal/drush-cmi-tools": "dev-8.x-2.x",
+        "drupal/drush_cmi_tools": "dev-8.x-2.x",
         "drupal/duration_field": "2.*@dev",
         "drupal/dynamic_entity_reference": "2.*@dev",
-        "drupal/entity_reference_revisions": "1.*@dev",
         "drupal/eva": "^2.0",
         "drupal/extra_field": "^1.0",
         "drupal/facets": "^1.3",
@@ -57,7 +54,7 @@
         "drupal/twig_tweak": "2.*",
         "drupal/views_aggregator": "dev-1.x",
         "drupal/views_bulk_operations": "^2.5",
-        "drupal/views_data_export": "1.*@dev",
+        "drupal/views_data_export": "^1.0",
         "drupal/webform": "5.*@dev",
         "drupal/webform_extra_field": "^1.0@alpha",
         "drupal/webform_views": "^5.0@alpha",
@@ -79,6 +76,9 @@
     "config": {
       "bin-dir": "bin/",
       "discard-changes": true,
+        "platform": {
+            "php": "7.2"
+        },
       "sort-packages": true
     },
     "extra": {
@@ -138,8 +138,7 @@
               "Support the #date_increment property in the 'duration' form element": "https://www.drupal.org/files/issues/2018-12-14/3020676-6.duration_date_increment.full_.patch"
             },
             "drupal/dynamic_entity_reference": {
-                "Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch",
-                "List config entities": "https://www.drupal.org/files/issues/dynamic_entity_reference-list-config-entities-in-field-storage-settings-2932062-2.patch"
+              "Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch"
             },
             "drupal/extra_field": {
                 "Allow form extra fields to be declared through ExtraField plugins": "https://www.drupal.org/files/issues/2019-01-17/extra_field-using_in_forms-2882061-24.patch"
@@ -155,9 +154,6 @@
             },
             "drupal/views_bulk_operations": {
                 "Input/Label Javascript broken for other themes": "https://www.drupal.org/files/issues/2019-02-21/3034916-input-label-javascript-broken-for-other-themes-2.patch"
-            },
-            "drupal/views_data_export": {
-                "Batch support": "https://drupal.org/files/issues/2018-08-16/2789531-144.patch"
             }
         }
     }
