@@ -58,7 +58,7 @@
         "drupal/webform_extra_field": "^1.0@alpha",
         "drupal/webform_views": "^5.0@alpha",
         "drupal/xero": "dev-1.x",
-        "drush/drush": "^9.6",
+        "drush/drush": "^10.0",
         "ext-json": "*",
         "ext-mbstring": "^7.2",
         "harvesthq/chosen": "^1.8",
