@@ -18,7 +18,6 @@
         "drupal/bootstrap": "3.*@dev",
         "drupal/chartjs_api": "dev-1.x",
         "drupal/chosen": "^2.7",
-        "drupal/ckeditor_mentions": "1.*@dev",
         "drupal/ckeditorheight": "dev-1.x",
         "drupal/core": "^8.8",
         "drupal/date_popup": "^1.0",
