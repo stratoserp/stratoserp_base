@@ -4,6 +4,10 @@ description: 'StratosERP base install.'
 version: VERSION
 core: 8.x
 core_version_requirement: ^8 || ^9
+
+distribution:
+  name: Distribution for StratosERP
+
 dependencies:
   - action
   - block
@@ -18,7 +22,6 @@ dependencies:
   - datetime_range
   - dynamic_page_cache
   - editor
-  - entity_reference
   - field_layout
   - field_ui
   - file
@@ -38,43 +41,34 @@ dependencies:
   - token
   - toolbar
   - tour
+  - user
   - views
   - views_ui
 
   # Contrib modules
   - admin_toolbar
   - admin_toolbar_tools
-  - chartjs_api
+  #- chartjs_api
   - chosen
   - chosen_field
-  - ckeditor_mentions
-  - ckeditorheight
   - date_popup
-  - drush_cmi_tools
   - duration_field
   - dynamic_entity_reference
   - eva
   - extra_field
-  - facets
   - field_group
-  - flat_comments
   - fullcalendar_view
   - geolocation
   - hook_event_dispatcher
-  - json_field
-  - libraries
+  #- json_field
   - linkit
-  - log_stdout
   - multiple_fields_remove_button
-  - nice_menus
-  - pdf_api
-  - printable
-  - r4032login
-  - realname
+  - replicate
+  - replicate_ui
   - serial
-  - simplify
+  #- simplify
   - token
-  - tvi
+  #- tvi
   - views_bulk_operations
   - views_data_export
   - webform
