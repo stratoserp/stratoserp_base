@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function stratoserp_theme_preprocess_node(&$variables) {
+  // Remove the "Add new comment" link on teasers or when the comment form is
+  // displayed on the page.
+  if ($variables['teaser'] || !empty($variables['content']['comments']['comment_form'])) {
+    unset($variables['content']['links']['comment']['#links']['comment-add']);
+  }
+}
+
+
+/**
+ * Implement hook_theme_suggestions_item_alter().
+ */
+function stratoserp_theme_theme_suggestions_item_list_alter(&$hook, $vars) {
+  $hook[] = 'item-list__se-core';
+}

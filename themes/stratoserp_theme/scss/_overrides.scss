@@ -1,0 +1,530 @@
+// @todo these should be their own CSS files and only included when
+// specific Drupal libraries are used.
+@import "component/alert";
+@import "component/ajax";
+@import "component/field";
+@import "component/file";
+@import "component/filter";
+@import "component/form";
+@import "component/icon";
+@import "component/navbar";
+@import "component/node";
+@import "component/panel";
+@import "component/progress-bar";
+@import "component/table-drag";
+@import "component/tabs";
+@import "component/toolbar";
+
+// jQuery UI style overrides.
+@import "jquery-ui/autocomplete";
+
+$menu_background: #222222;
+$menu_foreground: #efefef;
+$menu_hover_background: #cccccc;
+$menu_hover_foreground: #3a3a3a;
+
+ol, ul {
+  padding-left: 1.5em;
+  .popover &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Page header.
+.page-header {
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: 0;
+  padding: 0;
+}
+
+.navbar {
+  min-height: auto;
+  margin-bottom: 10px;
+}
+
+.horizontal-menu {
+  ul.sub-nav {
+    background-color: #f8f8f8;
+    border: 1px #e7e7e7;
+  }
+  li:hover > ul {
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    border-top: 0;
+  }
+}
+
+// Footer.
+.footer {
+  margin-top: 45px;
+  padding-top: 35px;
+  padding-bottom: 36px;
+  border-top: 1px solid #E5E5E5;
+}
+
+// Help region.
+.region-help {
+  > .glyphicon {
+    font-size: $font-size-large;
+    float: left;
+    margin: -0.05em 0.5em 0 0;
+  }
+  .block {
+    overflow: hidden;
+  }
+}
+
+.help-block, .control-group .help-inline {
+  color: $gray-light;
+  font-size: 12px;
+  margin: 5px 0 10px;
+  padding: 0;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+/* Other forms */
+.form-control {
+  width: auto;
+}
+
+/* Global node form customisations */
+.node-form,
+.se-item-form,
+.se-information-form {
+  input, select, .select-wrapper, .table, .input-group, label {
+    width: auto;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .control-label {
+    margin-bottom: 0;
+  }
+
+  .form-autocomplete {
+    display: table;
+  }
+
+  .form-control {
+    padding: 3px;
+  }
+
+  .form-group {
+    margin-bottom: 5px;
+  }
+
+  .input-group {
+    display: table;
+  }
+
+  input[type="date"].form-control {
+    line-height: unset;
+  }
+
+  .panel {
+    border: none;
+    box-shadow: none;
+  }
+
+  .panel-heading {
+    display: none;
+  }
+
+  .panel-body {
+    padding: 0;
+  }
+
+  .table > thead > tr > th {
+    border-bottom: none;
+  }
+  .table > tbody > tr > td {
+    border-top: none;
+    padding: 2px;
+    vertical-align: middle;
+  }
+
+  .tabledrag-handle {
+    font-size: 100%;
+    margin: -7px 0 0 -7px;
+    padding: 7px;
+  }
+
+  .tabledrag-toggle-weight {
+    display: none;
+  }
+
+  .form-type-select {
+    label {
+      display: block;
+    }
+
+    .form-control {
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .select-wrapper::after {
+      display: none;
+    }
+
+    .chosen-container-single {
+      width: auto !important;
+
+      div b {
+          background: none;
+      }
+
+      .chosen-drop {
+        margin-top: -8px;
+      }
+    }
+  }
+
+  .filter-wrapper {
+    display: none;
+  }
+
+  .input-group-addon {
+    padding: 3px;
+  }
+
+  .btn {
+    padding: 3px 8px;
+  }
+
+}
+
+.field-multiple-table {
+  margin-bottom: 0;
+  width: 95% !important;
+
+  .draggable {
+    div.form-item {
+      float: left;
+    }
+
+    button.multiple-fields-remove-button {
+      .icon:after {
+        display: none;
+      }
+      margin: -10px -25px 0 !important;
+    }
+  }
+}
+
+/* Custom css for items display on invoice, quote, po, goods receive */
+#edit-field-bi-lines-wrapper,
+#edit-field-in-lines-wrapper,
+#edit-field-qu-lines-wrapper,
+#edit-field-po-lines-wrapper,
+#edit-field-gr-lines-wrapper,
+#edit-field-pa-lines-wrapper,
+#edit-field-su-item-wrapper {
+  /* Reduce table width to make room for the remove button to show. */
+  table {
+
+    td {
+      padding: 0;
+
+      div.se-item-line-left {
+        width: 48%;
+        vertical-align: top;
+
+        div[class*=target-type],
+        div[class*=quantity],
+        div[class*=serial] {
+          float: left;
+          clear: both;
+        }
+        div[class*=price] {
+          float: right;
+        }
+      }
+      div.se-item-line-right {
+        width: 50%;
+        div.text-format-wrapper {
+          display: inline-table;
+        }
+      }
+    }
+
+    ul {
+      &.dropbutton {
+        list-style-type: none;
+      }
+
+      li {
+        float: right;
+      }
+    }
+
+    .form-item {
+      margin-bottom: 2px;
+    }
+
+    .form-control {
+      padding: 3px;
+    }
+
+    .input-group-addon {
+      padding: 3px;
+    }
+
+    select.dynamic-entity-reference-entity-type,
+    select.form-select {
+      padding: .40em 2em .40em .5em;
+      border: 1px solid #ccc;
+    }
+
+    .control-label {
+      display: none;
+    }
+
+    .panel {
+      background-color: inherit;
+      border: none;
+      box-shadow: none;
+    }
+
+    .panel-body {
+      padding: 0;
+    }
+  }
+
+}
+
+.layout {
+  .field--label,
+  .field--label-hidden,
+  .field__label {
+    clear: both;
+  }
+}
+
+.layout--twocol {
+  .layout__region {
+    padding: 5px;
+  }
+  .layout__region--top {
+    padding: 0;
+  }
+  .layout__region--bottom {
+    mark {
+      float: right;
+      padding: 1em;
+      background-color: #ff0;
+      border-radius: 50%;
+      position: absolute;
+      right: 0;
+    }
+    section article:nth-of-type(odd)  { background-color:#eee; }
+    section article:nth-of-type(even) { background-color:#fff; }
+    section article footer .layout--onecol {
+      padding: 0;
+    }
+  }
+}
+
+/* Views themeing */
+.view {
+  .views-exposed-form {
+    .form-item-description, .form-item-name {
+      input {
+        width: 15em;
+      }
+    }
+    .form-item-email, .form-item-business {
+      input {
+        width: 12em;
+      }
+    }
+    .form-item-phone, .form-item-mobile, .form-item-item-code {
+      input {
+        width: 8em;
+      }
+    }
+    .form-type-entity-autocomplete {
+      input {
+        width: 15em;
+      }
+    }
+    .form-item-purchase-order-id, .form-item-goods-receive-id, .form-item-invoice-id, .form-item-quote-id {
+      input {
+        width: 6em;
+      }
+    }
+  }
+  .views-field-created {
+    width: 7em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .views-field-field-in-id,
+  .views-field-field-po-id,
+  .views-field-field-pa-id,
+  .views-field-field-qu-id,
+  .views-field-field-ti-id {
+    width: 2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .views-field-field-pa-total {
+    text-align: right;
+  }
+}
+
+.view-eva {
+  .table-responsive {
+    min-height: 308px;
+    table-layout: fixed;
+    white-space: nowrap;
+    display: block;
+    td {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.table {
+  tbody {
+    tr {
+      td.views-field-field-pa-items {
+        padding: 0;
+        border-top: none;
+
+        .table {
+          margin-bottom: 0;
+          width: 100%;
+
+          tbody {
+            tr {
+              td {
+                //padding: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+
+              td:nth-child(1) {
+                width: 50%;
+              }
+
+              td:nth-child(2) {
+                width: 25%;
+              }
+
+              td:nth-child(3) {
+                width: 25%;
+                text-align: right;
+              }
+            }
+          }
+        }
+
+        .table-responsive {
+          min-height: 0;
+          border-top: none;
+
+          thead {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.view-wi-submissions {
+  .table-responsive {
+    min-height: 0;
+  }
+}
+
+.table > thead > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+  padding: 5px;
+  //line-height: 1.1;
+}
+
+.pager {
+  margin: 0;
+  text-align: left;
+  li {
+    a {
+      border-radius: 0;
+    }
+    &.is-active {
+      a {
+        background-color: $gray-lighter;
+      }
+    }
+    &.pager__item--ellipsis {
+      display: none;
+    }
+  }
+}
+
+.charts-highchart,
+.charts-google,
+.charts-c3 {
+  width: 100%;
+  height: 800px;
+}
+
+/* Nice menus */
+#block-nicemenus {
+  font-size: 16px;
+  background-color: $menu_background;
+  border: none;
+  margin: -15px -15px 10px -15px;
+
+  a, a:hover {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: $menu_foreground;
+  }
+
+  ul.nice-menu {
+    ul {
+      top: auto;
+      background-color: $menu_background;
+      border: none;
+    }
+    li {
+      background-color: $menu_background;
+      border: none;
+      :hover {
+        background-color: $menu_hover_background;
+        border: none;
+      }
+    }
+  }
+
+  ul.nice-menu-down {
+    li.menuparent {
+      background-color: $menu_background;
+      background-image: none;
+      :hover {
+        background-color: $menu_hover_background;
+        background-image: none;
+      }
+    }
+    li li.menuparent {
+      background-color: $menu_background;
+      background-image: none;
+      :hover {
+        background-color: $menu_hover_background;
+        background-image: none;
+      }
+    }
+  }
+}
