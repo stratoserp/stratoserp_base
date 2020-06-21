@@ -1,0 +1,28 @@
+{
+  "name": "stratoserp_theme",
+  "description": "StratosERP bootstrap based theme.",
+  "license": "GPL-2.0",
+  "version": "0.0.1",
+  "engines": {
+    "yarn": ">= 1.6",
+    "node": ">= 8.11"
+  },
+  "scripts": {
+    "style": "cross-env NODE_ENV=development ./node_modules/.bin/gulp style",
+    "watch": "cross-env NODE_ENV=development ./node_modules/.bin/gulp watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.1",
+    "cross-env": "^5.1.3",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "dependencies": {
+    "compass": "^0.1.1",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-compass": "^2.1.0"
+  }
+}
