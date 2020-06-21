@@ -3,52 +3,45 @@
   "description": "StratosERP installation profile",
   "type": "drupal-profile",
   "homepage": "https://github.com/singularo/stratoserp_base",
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "repositories": [
     { "type": "composer", "url": "https://packages.drupal.org/8" },
-    { "type": "composer", "url": "https://asset-packagist.org" },
-    { "type": "vcs", "url": "https://github.com/singularo/flat_comments.git" }
+    { "type": "composer", "url": "https://asset-packagist.org" }
   ],
   "require": {
     "php": ">=7.4",
     "ext-json": "*",
     "ext-mbstring": "*",
     "ext-posix": "*",
-    "composer-plugin-api": "^1.1 || ^2",
-    "composer/semver": "^1.4",
-    "cweagans/composer-patches": "~1.0",
+    "composer/installers": "^1.2",
+    "cweagans/composer-patches": "^1.6.5",
     "drupal/admin_toolbar": "^2.2",
     "drupal/bootstrap4": "^2.0",
-    "drupal/chosen": "^2.9",
+    "drupal/chartjs_api": "^1.1",
     "drupal/ckeditorheight": "^1.8",
     "drupal/core": "^9",
     "drupal/core-composer-scaffold": "^9",
     "drupal/core-recommended": "^9",
-    "drupal/duration_field": "^2.0",
+    "drupal/duration_field": "^2.0@rc",
     "drupal/dynamic_entity_reference": "^1.10",
-    "drupal/eva": "^2.0",
+    "drupal/eva": "^2.1",
     "drupal/extra_field": "^1.2",
-    "drupal/field_group": "^3.0",
-    "drupal/flat_comments": "dev-master",
-    "drupal/fullcalendar_view": "^2.6",
+    "drupal/field_group": "dev-3.x",
+    "drupal/fullcalendar_view": "^5",
     "drupal/geolocation": "^3.2",
-    "drupal/hook_event_dispatcher": "^2.0",
+    "drupal/hook_event_dispatcher": "^2.1",
     "drupal/multiple_fields_remove_button": "1.*@dev",
-    "drupal/pathauto": "^1.8",
-    "drupal/search_api": "^1.17",
     "drupal/serial": "dev-1.x",
     "drupal/token": "^1.7",
-    "drupal/tvi": "^1.0@beta",
+    "drupal/toolbar_menu": "^2.2",
     "drupal/twig_tweak": "^3.0",
-    "drupal/views_bulk_operations": "^3.6",
-    "drupal/views_data_export": "^1.0@dev",
+    "drupal/views_bulk_operations": "^3.7",
+    "drupal/views_data_export": "dev-1.x",
     "drupal/webform": "^6.0",
-    "drupal/webform_views": "^5.0@alpha",
-    "drupal/xero": "^1.2",
-    "drush/drush": "^10.0",
-    "harvesthq/chosen": "^1.8",
+    "drupal/xero": "dev-2.x",
+    "drush/drush": "dev-master",
     "oomphinc/composer-installers-extender": "^1.1",
-    "symfony/filesystem": "^4.4",
+    "singularo/shepherd-drupal-scaffold": "dev-develop",
     "vlucas/phpdotenv": "^4.0",
     "webflo/drupal-finder": "^1.0.0",
     "webmozart/path-util": "^2.3",
@@ -69,10 +62,12 @@
   "extra": {
     "composer-exit-on-patch-failure": true,
     "drupal-scaffold": {
+      "allowed-packages": [
+        "singularo/shepherd-drupal-scaffold"
+      ],
       "locations": {
         "web-root": "web/"
-      },
-      "allowed-packages": ["singularo/shepherd-drupal-scaffold"]
+      }
     },
     "installer-types": [
       "bower-asset",
@@ -96,29 +91,14 @@
       "web/sites"
     ],
     "patches": {
-      "drupal/chartjs_api": {
-        "Line graph coloring doesn't work - fixed with upgrade to 2.8.0": "https://www.drupal.org/files/issues/2019-05-09/3053642-2.chartjs_api.Line-graph-coloring-doesnt-work--fixed-with-upgrade-to-280.patch"
-      },
-      "drupal/chosen": {
-        "Chosen field should force height to auto": "https://www.drupal.org/files/issues/Issue-2839655-by-hass-Chosen-field-should-force-heig.patch"
-      },
-      "drupal/core": {
-        "Migrate exceptions need line details": "https://www.drupal.org/files/issues/2018-05-04/2969551.drupal.migrate-exceptions-missing-file-line.patch"
-      },
       "drupal/dynamic_entity_reference": {
         "Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch"
-      },
-      "drupal/eva": {
-        "Drupal 9 readiness": "https://www.drupal.org/files/issues/2020-05-21/3042832-13.patch"
       },
       "drupal/extra_field": {
         "Allow form extra fields to be declared through ExtraField plugins": "https://www.drupal.org/files/issues/2019-01-17/extra_field-using_in_forms-2882061-24.patch"
       },
       "drupal/serial": {
         "Support migrating existing values": "./patches/2946075.patch"
-      },
-      "drupal/webform_extra_field": {
-        "Drupal 9 readiness": "https://www.drupal.org/files/issues/2020-01-15/drupal_9_webform_extra_field_3106626_0.patch"
       }
     },
     "patchLevel": {
