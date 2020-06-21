@@ -1,83 +1,69 @@
 diff --git a/src/Plugin/Field/FieldType/SerialItem.php b/src/Plugin/Field/FieldType/SerialItem.php
-index e21f56b..ef366e1 100644
+index e21f56b..7acc264 100644
 --- a/src/Plugin/Field/FieldType/SerialItem.php
 +++ b/src/Plugin/Field/FieldType/SerialItem.php
-@@ -194,6 +194,7 @@ class SerialItem extends FieldItemBase {
-     $serial = NULL;
+@@ -195,6 +195,9 @@ class SerialItem extends FieldItemBase {
      $entity = $this->getEntity();
      $newSerial = FALSE;
-+    $newValue = NULL;
  
++    // Optional value from an external source, mostly used for migrations.
++    $externalValue = NULL;
++
      // Does not apply if the node is not new or translated.
      if ($entity->isNew()) {
-@@ -213,9 +214,12 @@ class SerialItem extends FieldItemBase {
+       $newSerial = TRUE;
+@@ -213,9 +216,12 @@ class SerialItem extends FieldItemBase {
      }
  
      if ($newSerial) {
-+      if (isset($this->value) && (int)$this->value !== -1) {
-+        $newValue = $this->value;
++      if (isset($this->value) && (int) $this->value !== -1) {
++        $externalValue = $this->value;
 +      }
        /** @var \Drupal\serial\SerialStorageInterface $serialStorage */
        $serialStorage = \Drupal::getContainer()->get('serial.sql_storage');
 -      $serial = $serialStorage->generateValue($this->getFieldDefinition(), $this->getEntity());
-+      $serial = $serialStorage->generateValue($this->getFieldDefinition(), $this->getEntity(), $newValue);
++      $serial = $serialStorage->generateValue($this->getFieldDefinition(), $this->getEntity(), $externalValue);
  
        // Get the starting value from the storage settings.
        $settings = $this->getSettings();
 diff --git a/src/Plugin/Field/FieldWidget/SerialDefaultWidget.php b/src/Plugin/Field/FieldWidget/SerialDefaultWidget.php
-index dceed9f..ea21baf 100644
+index dceed9f..f948b90 100644
 --- a/src/Plugin/Field/FieldWidget/SerialDefaultWidget.php
 +++ b/src/Plugin/Field/FieldWidget/SerialDefaultWidget.php
-@@ -30,7 +30,7 @@ class SerialDefaultWidget extends WidgetBase {
+@@ -29,8 +29,8 @@ class SerialDefaultWidget extends WidgetBase {
+       // Default value cannot be NULL,
        // throws 'This value should be of the correct primitive type'.
        // @see https://www.drupal.org/node/2220381
-       // so the serial is defaulted to a positive int.
+-      // so the serial is defaulted to a positive int.
 -      '#default_value' => isset($items[$delta]->value) ? $items[$delta]->value : 1,
++      // so the serial is defaulted to a negative int.
 +      '#default_value' => isset($items[$delta]->value) ? $items[$delta]->value : -1,
      ];
      return $element;
    }
 diff --git a/src/SerialSQLStorage.php b/src/SerialSQLStorage.php
-index 99735bb..a4a606c 100644
+index 2cbb7b7..8b5adef 100644
 --- a/src/SerialSQLStorage.php
 +++ b/src/SerialSQLStorage.php
-@@ -3,6 +3,7 @@
- namespace Drupal\serial;
- 
- use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
-+use Drupal\Core\Entity\EntityTypeManagerInterface;
- use Drupal\Core\Entity\FieldableEntityInterface;
- use Drupal\Core\Field\FieldDefinitionInterface;
- use Symfony\Component\DependencyInjection\ContainerInterface;
-@@ -37,7 +38,7 @@ class SerialSQLStorage implements ContainerInjectionInterface, SerialStorageInte
-    * {@inheritdoc}
-    */
-   public function __construct(QueryFactory $entityQuery,
--                              EntityTypeManager $entityTypeManager) {
-+                              EntityTypeManagerInterface $entityTypeManager) {
-     $this->entityQuery = $entityQuery;
-     $this->entityTypeManager = $entityTypeManager;
-   }
-@@ -77,7 +78,7 @@ class SerialSQLStorage implements ContainerInjectionInterface, SerialStorageInte
+@@ -66,7 +66,7 @@ class SerialSQLStorage implements ContainerInjectionInterface, SerialStorageInte
    /**
     * {@inheritdoc}
     */
 -  public function generateValueFromName($storageName, $delete = TRUE) {
-+  public function generateValueFromName($storageName, $value, $delete = TRUE) {
++  public function generateValueFromName($storageName, $externalValue = NULL, $delete = TRUE) {
      $connection = Database::getConnection();
      // @todo review https://api.drupal.org/api/drupal/core%21includes%21database.inc/function/db_transaction/8.2.x
      $transaction = $connection->startTransaction();
-@@ -85,9 +86,17 @@ class SerialSQLStorage implements ContainerInjectionInterface, SerialStorageInte
+@@ -74,9 +74,17 @@ class SerialSQLStorage implements ContainerInjectionInterface, SerialStorageInte
      try {
        // Insert a temporary record to get a new unique serial value.
        $uniqid = uniqid('', TRUE);
 -      $sid = $connection->insert($storageName)
 -        ->fields(['uniqid' => $uniqid])
 -        ->execute();
-+
-+      if (isset($value)) {
++      if (isset($externalValue)) {
 +        $sid = $connection->insert($storageName)
-+          ->fields(['sid' => $value, 'uniqid' => $uniqid])
++          ->fields(['sid' => $externalValue, 'uniqid' => $uniqid])
 +          ->execute();
 +      }
 +      else {
@@ -85,31 +71,32 @@ index 99735bb..a4a606c 100644
 +          ->fields(['uniqid' => $uniqid])
 +          ->execute();
 +      }
++
  
        // If there's a reason why it's come back undefined, reset it.
        $sid = isset($sid) ? $sid : 0;
-@@ -116,9 +125,10 @@ class SerialSQLStorage implements ContainerInjectionInterface, SerialStorageInte
+@@ -105,9 +113,10 @@ class SerialSQLStorage implements ContainerInjectionInterface, SerialStorageInte
     */
    public function generateValue(FieldDefinitionInterface $fieldDefinition,
                                  FieldableEntityInterface $entity,
-+                                int $value = NULL,
++                                $externalValue = NULL,
                                  $delete = TRUE) {
      $storageName = $this->createStorageNameFromField($fieldDefinition, $entity);
 -    return $this->generateValueFromName($storageName, $delete);
-+    return $this->generateValueFromName($storageName, $value, $delete);
++    return $this->generateValueFromName($storageName, $externalValue, $delete);
    }
  
    /**
 diff --git a/src/SerialStorageInterface.php b/src/SerialStorageInterface.php
-index d7b302f..7c167f5 100644
+index d7b302f..ef8cddb 100644
 --- a/src/SerialStorageInterface.php
 +++ b/src/SerialStorageInterface.php
 @@ -46,13 +46,15 @@ interface SerialStorageInterface {
     *
     * @param string $storageName
     *   Storage name.
-+   * @param int $value
-+   *   Existing value to insert
++   * @param int $externalValue
++   *   Optional value from an external source, mostly used for migrations.
     * @param bool $delete
     *   Indicates if temporary records should be deleted.
     *
@@ -117,7 +104,7 @@ index d7b302f..7c167f5 100644
     *   Unique serial id.
     */
 -  public function generateValueFromName($storageName, $delete = TRUE);
-+  public function generateValueFromName($storageName, int $value, $delete = TRUE);
++  public function generateValueFromName($storageName, $externalValue = NULL, $delete = TRUE);
  
    /**
     * Generates a unique serial value (unique per entity bundle).
@@ -125,8 +112,8 @@ index d7b302f..7c167f5 100644
     *   Field definition.
     * @param \Drupal\Core\Entity\FieldableEntityInterface $entity
     *   Entity.
-+   * @param int $value
-+   *   Existing value to insert
++   * @param int $externalValue
++   *   Optional value from an external source, mostly used for migrations.
     * @param bool $delete
     *   Indicates if temporary records should be deleted.
     *
@@ -134,7 +121,7 @@ index d7b302f..7c167f5 100644
     *   Unique serial id.
     */
 -  public function generateValue(FieldDefinitionInterface $fieldDefinition, FieldableEntityInterface $entity, $delete = TRUE);
-+  public function generateValue(FieldDefinitionInterface $fieldDefinition, FieldableEntityInterface $entity, int $value, $delete = TRUE);
++  public function generateValue(FieldDefinitionInterface $fieldDefinition, FieldableEntityInterface $entity, $externalValue = NULL, $delete = TRUE);
  
    /**
     * Gets the schema of the assistant storage for generating serial values.
