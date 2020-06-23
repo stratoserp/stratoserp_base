@@ -42,9 +42,8 @@
     "drush/drush": "dev-master",
     "oomphinc/composer-installers-extender": "^1.1",
     "singularo/shepherd-drupal-scaffold": "dev-develop",
-    "vlucas/phpdotenv": "^4.0",
+    "vlucas/phpdotenv": "^5",
     "webflo/drupal-finder": "^1.0.0",
-    "webmozart/path-util": "^2.3",
     "zaporylie/composer-drupal-optimizations": "^1.0"
   },
   "conflict": {
