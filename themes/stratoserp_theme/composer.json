@@ -1,0 +1,17 @@
+{
+  "name": "drupal/stratoserp_theme",
+  "description": "Stratos ERP theme.",
+  "type": "drupal-theme",
+  "authors": [
+    {
+      "name": "Simon Lindsay",
+      "homepage": "https://www.drupal.org/u/singularo",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/singularo/stratoserp_theme/issues"
+  },
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev"
+}

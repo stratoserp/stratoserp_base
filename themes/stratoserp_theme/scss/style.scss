@@ -1,0 +1,141 @@
+// Include bootstrap variables definitions overrides.
+@import 'overrides/variables';
+
+// Include parent theme with all things Bootstrap for full override.
+// Relative path to this styles.scss file.
+// Example: @import "../../../../../themes/contrib/bootstrap4/scss/style";
+//@import "../../contrib/bootstrap4/scss/style";
+
+// OR test new Bootstrap 4.5.0
+@import "../../contrib/bootstrap4/scss/style-4-5-0";
+
+// Include custom sub theme.
+@import 'custom/variables';
+
+// Include custom sub theme.
+//@import 'custom/mixins/misc';
+//@import 'custom/misc';
+
+// Ensure that the list of extra function buttons dpes the right thing.
+.block-se-core {
+  .item-list {
+    li {
+      display: inline-block;
+      margin: 0 0.25rem 0.25rem 0;
+      .btn {
+        padding: .2rem .4rem;
+      }
+    }
+  }
+}
+
+// Fix weird spacing issue with bootstrap4/Drupal 9
+div.vertical-tabs__panes {
+  display: inline-block;
+  width: 100%;
+}
+
+// Add some blank space at the top of the page.
+.row {
+  margin-top: .5rem;
+
+  // Reduce footer spacing on timekeeping comment display.
+  .node--type-se-ticket {
+    .comment {
+      .content {
+        padding-top: .5rem;
+      }
+    }
+
+    .layout__region--bottom {
+      border-bottom: 1px solid $card-border-color;
+    }
+
+    .comment-se-timekeeping-form {
+      .layout__region {
+        padding: .25rem;
+      }
+    }
+  }
+}
+
+.layout__region {
+  padding: .5rem;
+}
+
+// Chosen addon needs some tweaks. Actually, removed it for now.
+.form-select {
+  &.chosen-enable {
+    border: unset;
+    font-size: 13px;
+    width: unset;
+  }
+}
+
+.form-control {
+  width: unset;
+}
+
+.node-form {
+  .form-actions {
+    text-align: left;
+  }
+}
+
+.pager {
+  li.btn {
+    padding: unset;
+    border: unset;
+  }
+  li {
+    a {
+      display: inline-block;
+      padding: 0 .75rem 0 .75rem;
+    }
+  }
+}
+
+// Setup icons for the toolbar menu.
+nav {
+  .toolbar-menu {
+    ::before {
+      position: absolute;
+      top: 0;
+      left: 0.6667em;
+      display: block;
+      width: 20px;
+      height: 100%;
+      content: "";
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: center center;
+      background-size: 100% auto;
+    }
+
+    .toolbar-icon-link-toolbar-menu-se-core-home::before {
+      background-image: url(../icons/house.svg);
+    }
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-customer-list-page-1::before {
+      background-image: url(../icons/person.svg);
+    }
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-information-list-page-1::before {
+      background-image: url(../icons/file.svg);
+    }
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-item-list-page-1::before {
+      background-image: url(../icons/puzzlepiece.svg);
+    }
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-stock-item-list-page-1::before {
+      background-image: url(../icons/puzzlepiece.svg);
+    }
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-supplier-list-page-1::before {
+      background-image: url(../icons/person.svg);
+    }
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-ticket-list-page-1::before {
+      background-image: url(../icons/wrench.svg);
+    }
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-timekeeping-list-page-1::before {
+      background-image: url(../icons/cog.svg);
+    }
+  }
+}

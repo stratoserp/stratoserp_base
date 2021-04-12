@@ -4,6 +4,10 @@ description: 'StratosERP base install.'
 version: VERSION
 core: 8.x
 core_version_requirement: ^8 || ^9
+
+distribution:
+  name: Distribution for StratosERP
+
 dependencies:
   - action
   - block
@@ -13,12 +17,10 @@ dependencies:
   - config
   - comment
   - contextual
-  - contact
   - datetime
   - datetime_range
   - dynamic_page_cache
   - editor
-  - entity_reference
   - field_layout
   - field_ui
   - file
@@ -32,12 +34,13 @@ dependencies:
   - options
   - path
   - page_cache
-  - search
+  #- search
   - taxonomy
   - telephone
   - token
   - toolbar
   - tour
+  - user
   - views
   - views_ui
 
@@ -45,48 +48,33 @@ dependencies:
   - admin_toolbar
   - admin_toolbar_tools
   - chartjs_api
-  - chosen
-  - chosen_field
-  - ckeditor_mentions
-  - ckeditorheight
   - date_popup
-  - drush_cmi_tools
   - duration_field
   - dynamic_entity_reference
   - eva
   - extra_field
-  - facets
   - field_group
-  - flat_comments
   - fullcalendar_view
   - geolocation
+  - geolocation_google_maps
   - hook_event_dispatcher
-  - json_field
-  - libraries
   - linkit
-  - log_stdout
   - multiple_fields_remove_button
-  - nice_menus
-  - pdf_api
-  - printable
-  - r4032login
-  - realname
+  - replicate
+  - replicate_ui
   - serial
-  - simplify
   - token
-  - tvi
   - views_bulk_operations
   - views_data_export
   - webform
   - webform_ui
 
   # Stratos ERP
+  - stratoserp
   - se_accounting
-  - se_basic_setup
   - se_bill
+  - se_business
   - se_contact
-  - se_core
-  - se_customer
   - se_goods_receipt
   - se_invoice
   - se_item_line
@@ -95,7 +83,6 @@ dependencies:
   - se_purchase_order
   - se_quote
   - se_report
-  - se_supplier
   - se_ticket
   - se_timekeeping
 
@@ -120,5 +107,9 @@ dependencies:
   - se_xero
 
 themes:
+  # Admin theme
   - seven
+
+  # Stratos ERP theme needs bootstrap for base theme
+  - bootstrap4
   - stratoserp_theme

@@ -1,4 +1,6 @@
+#
 # Stratos ERP base profile
+#
 
 This repository contains the base install profile that is used by the
 composer quick install.
