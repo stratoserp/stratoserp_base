@@ -1,104 +1,102 @@
 {
-  "name": "singularo/stratoserp_base",
-  "description": "StratosERP installation profile",
-  "type": "drupal-profile",
-  "homepage": "https://github.com/singularo/stratoserp_base",
-  "license": "GPL-2.0-or-later",
-  "repositories": [
-    { "type": "composer", "url": "https://packages.drupal.org/8" },
-    { "type": "composer", "url": "https://asset-packagist.org" }
-  ],
-  "require": {
-    "php": ">=7.4",
-    "ext-json": "*",
-    "ext-mbstring": "*",
-    "ext-posix": "*",
-    "composer/installers": "^1.2",
-    "cweagans/composer-patches": "^1.6.5",
-    "drupal/admin_toolbar": "^2.2",
-    "drupal/bootstrap4": "^2.0",
-    "drupal/chartjs_api": "^1.1",
-    "drupal/ckeditorheight": "^1.8",
-    "drupal/core": "^9",
-    "drupal/core-composer-scaffold": "^9",
-    "drupal/core-recommended": "^9",
-    "drupal/duration_field": "^2.0@rc",
-    "drupal/dynamic_entity_reference": "^1.10",
-    "drupal/eva": "^2.1",
-    "drupal/extra_field": "^1.2",
-    "drupal/field_group": "dev-3.x",
-    "drupal/fullcalendar_view": "^5",
-    "drupal/geolocation": "^3.2",
-    "drupal/hook_event_dispatcher": "^2.1",
-    "drupal/multiple_fields_remove_button": "1.*@dev",
-    "drupal/serial": "dev-1.x",
-    "drupal/token": "^1.7",
-    "drupal/toolbar_menu": "^2.2",
-    "drupal/twig_tweak": "^3.0",
-    "drupal/views_bulk_operations": "^3.7",
-    "drupal/views_data_export": "dev-1.x",
-    "drupal/webform": "^6.0",
-    "drupal/xero": "dev-2.x",
-    "drush/drush": "dev-master",
-    "oomphinc/composer-installers-extender": "^1.1",
-    "singularo/shepherd-drupal-scaffold": "dev-develop",
-    "vlucas/phpdotenv": "^5",
-    "webflo/drupal-finder": "^1.0.0",
-    "zaporylie/composer-drupal-optimizations": "^1.0"
-  },
-  "conflict": {
-    "drupal/drupal": "*"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "config": {
-    "discard-changes": true,
-    "platform": {
-      "php": "7.4"
-    },
-    "sort-packages": true
-  },
-  "extra": {
-    "composer-exit-on-patch-failure": true,
-    "drupal-scaffold": {
-      "allowed-packages": [
-        "singularo/shepherd-drupal-scaffold"
-      ],
-      "locations": {
-        "web-root": "web/"
-      }
-    },
-    "installer-types": [
-      "bower-asset",
-      "npm-asset",
-      "library"
+    "name": "singularo/stratoserp_base",
+    "description": "StratosERP installation profile",
+    "type": "drupal-profile",
+    "homepage": "https://github.com/singularo/stratoserp_base",
+    "license": "GPL-2.0-or-later",
+    "repositories": [
+        { "type": "composer", "url": "https://packages.drupal.org/8" },
+        { "type": "composer", "url": "https://asset-packagist.org" }
     ],
-    "installer-paths": {
-      "web/core": ["type:drupal-core"],
-      "web/libraries/{$name}": [
-        "type:drupal-library",
-        "type:bower-asset",
-        "type:npm-asset",
-        "harvesthq/chosen"
-      ],
-      "web/modules/contrib/{$name}": ["type:drupal-module"],
-      "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-      "web/themes/contrib/{$name}": ["type:drupal-theme"],
-      "drush/contrib/{$name}": ["type:drupal-drush"]
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-posix": "*",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6.5",
+        "drupal/admin_toolbar": "^2.3",
+        "drupal/bootstrap4": "^2.0",
+        "drupal/chartjs_api": "^1.1",
+        "drupal/core": "^9",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/duration_field": "^2.0@rc",
+        "drupal/dynamic_entity_reference": "^1.10",
+        "drupal/eva": "^2.1",
+        "drupal/extra_field": "^1.2",
+        "drupal/field_group": "dev-3.x",
+        "drupal/fullcalendar_view": "^5.0",
+        "drupal/geolocation": "^3.2",
+        "drupal/hook_event_dispatcher": "^2.1",
+        "drupal/multiple_fields_remove_button": "1.*@dev",
+        "drupal/token": "^1.7",
+        "drupal/toolbar_menu": "^2.2",
+        "drupal/twig_tweak": "^3.0",
+        "drupal/views_bulk_operations": "^3.9",
+        "drupal/views_data_export": "dev-1.x",
+        "drupal/webform": "^6.0",
+        "drupal/xero": "dev-2.x",
+        "drush/drush": "^10",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "singularo/shepherd-drupal-scaffold": "dev-develop",
+        "vlucas/phpdotenv": "^5",
+        "webflo/drupal-finder": "^1.0.0",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
     },
-    "preserve-paths": [
-      "web/sites"
-    ],
-    "patches": {
-      "drupal/dynamic_entity_reference": {
-        "Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch"
-      },
-      "drupal/extra_field": {
-        "Allow form extra fields to be declared through ExtraField plugins": "https://www.drupal.org/files/issues/2019-01-17/extra_field-using_in_forms-2882061-24.patch"
-      }
+    "conflict": {
+        "drupal/drupal": "*"
     },
-    "patchLevel": {
-      "drupal/core": "-p2"
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "discard-changes": true,
+        "platform": {
+            "php": "7.4"
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": true,
+        "drupal-scaffold": {
+            "allowed-packages": [
+                "singularo/shepherd-drupal-scaffold"
+            ],
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "preserve-paths": [
+            "web/sites"
+        ],
+        "patches": {
+            "drupal/core": {
+                "Update window location on tab click": "./patches/vertical-tabs.patch"
+            },
+            "drupal/dynamic_entity_reference": {
+                "Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch"
+            },
+            "drupal/extra_field": {
+                "Allow form extra fields to be declared through ExtraField plugins": "https://www.drupal.org/files/issues/2019-01-17/extra_field-using_in_forms-2882061-24.patch"
+            }
+        },
+        "patchLevel": {
+            "drupal/core": "-p1"
+        }
     }
-  }
 }

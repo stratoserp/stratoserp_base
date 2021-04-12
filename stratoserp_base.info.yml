@@ -34,7 +34,7 @@ dependencies:
   - options
   - path
   - page_cache
-  - search
+  #- search
   - taxonomy
   - telephone
   - token
@@ -58,27 +58,23 @@ dependencies:
   - geolocation
   - geolocation_google_maps
   - hook_event_dispatcher
-  #- json_field
   - linkit
   - multiple_fields_remove_button
   - replicate
   - replicate_ui
   - serial
-  #- simplify
   - token
-  #- tvi
   - views_bulk_operations
   - views_data_export
   - webform
   - webform_ui
 
   # Stratos ERP
+  - stratoserp
   - se_accounting
-  - se_basic_setup
   - se_bill
+  - se_business
   - se_contact
-  - se_core
-  - se_customer
   - se_goods_receipt
   - se_invoice
   - se_item_line
@@ -87,7 +83,6 @@ dependencies:
   - se_purchase_order
   - se_quote
   - se_report
-  - se_supplier
   - se_ticket
   - se_timekeeping
 
@@ -112,5 +107,9 @@ dependencies:
   - se_xero
 
 themes:
+  # Admin theme
   - seven
+
+  # Stratos ERP theme needs bootstrap for base theme
+  - bootstrap4
   - stratoserp_theme
