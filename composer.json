@@ -1,8 +1,8 @@
 {
-    "name": "singularo/stratoserp_base",
+    "name": "stratoserp/stratoserp_base",
     "description": "StratosERP installation profile",
     "type": "drupal-profile",
-    "homepage": "https://github.com/singularo/stratoserp_base",
+    "homepage": "https://github.com/stratoserp/stratoserp_base",
     "license": "GPL-2.0-or-later",
     "repositories": [
         { "type": "composer", "url": "https://packages.drupal.org/8" },
