@@ -7,7 +7,7 @@
 //@import "../../contrib/bootstrap4/scss/style";
 
 // OR test new Bootstrap 4.5.0
-@import "../../contrib/bootstrap4/scss/style-4-5-0";
+@import "../../../../themes/contrib/bootstrap4/scss/style-4-5-0";
 
 // Include custom sub theme.
 @import 'custom/variables';
@@ -17,7 +17,7 @@
 //@import 'custom/misc';
 
 // Ensure that the list of extra function buttons dpes the right thing.
-.block-se-core {
+.block-stratoserp {
   .item-list {
     li {
       display: inline-block;
@@ -63,6 +63,13 @@ div.vertical-tabs__panes {
   padding: .5rem;
 }
 
+#stratoserp-search-form {
+  input.button {
+    margin-left: unset;
+    margin-right: unset;
+  }
+}
+
 // Chosen addon needs some tweaks. Actually, removed it for now.
 .form-select {
   &.chosen-enable {
@@ -86,6 +93,7 @@ div.vertical-tabs__panes {
   li.btn {
     padding: unset;
     border: unset;
+    min-width: 33px;
   }
   li {
     a {
@@ -93,10 +101,20 @@ div.vertical-tabs__panes {
       padding: 0 .75rem 0 .75rem;
     }
   }
+  .pager-item {
+    min-width: 33px;
+  }
 }
 
 // Setup icons for the toolbar menu.
 nav {
+  .toolbar-tab {
+    // Icon for system menu entry.
+    .toolbar-icon-toolbar-menu-stratoserp::before {
+      background-image: url(../icons/stratoserp.svg);
+    }
+  }
+
   .toolbar-menu {
     ::before {
       position: absolute;
@@ -113,7 +131,8 @@ nav {
       background-size: 100% auto;
     }
 
-    .toolbar-icon-link-toolbar-menu-se-core-home::before {
+    // Icons for StratosERP entries.
+    .toolbar-icon-link-toolbar-menu-stratoserp-home::before {
       background-image: url(../icons/house.svg);
     }
     .toolbar-icon-link-toolbar-menu-views-view-views-se-customer-list-page-1::before {
@@ -137,5 +156,28 @@ nav {
     .toolbar-icon-link-toolbar-menu-views-view-views-se-timekeeping-list-page-1::before {
       background-image: url(../icons/cog.svg);
     }
+  }
+}
+
+.view {
+  // Totals in views should be right justified.
+  .views-field-se-gr-total,
+  .views-field-se-in-total,
+  .views-field-se-pa-total,
+  .views-field-se-po-total,
+  .views-field-se-qu-total {
+    text-align: right;
+  }
+
+  // Prices in views should be right justified.
+  .views-field-se-it-cost-price,
+  .views-field-se-it-sell-price {
+    text-align: right;
+  }
+
+  // No wrapping
+  .views-field {
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }

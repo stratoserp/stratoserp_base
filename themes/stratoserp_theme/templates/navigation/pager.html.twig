@@ -51,10 +51,6 @@
           <span aria-hidden="true">{{ items.previous.text|default('‹'|t) }}</span>
         </a>
       </li>
-      {# Add an ellipsis if there are further previous pages. #}
-      {% if ellipses.previous %}
-        <li class="pager__item pager__item--ellipsis {{ btn_classes|join(' ') }}" role="presentation">&hellip;</li>
-      {% endif %}
       {# Now generate the actual pager piece. #}
       {% for key, item in items.pages %}
         <li class="btn btn-secondary pager__item{{ current == key ? ' active' : '' }} {{ btn_classes|join(' ') }}">
@@ -71,10 +67,6 @@
           </a>
         </li>
       {% endfor %}
-      {# Add an ellipsis if there are further next pages. #}
-      {% if ellipses.next %}
-        <li class="pager__item pager__item--ellipsis {{ btn_classes|join(' ') }}" role="presentation">&hellip;</li>
-      {% endif %}
       <li class="pager__item pager__item--next {{ btn_classes|join(' ') }}">
         <a href="{{ items.next.href }}" title="{{ 'Go to next page'|t }}" rel="next"{{ items.next.attributes|without('href', 'title', 'rel') }}>
           <span class="visually-hidden">{{ 'Next page'|t }}</span>
