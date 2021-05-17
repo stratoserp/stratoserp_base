@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - se_core
+    - stratoserp
   theme:
     - stratoserp_theme
 id: stratoserpnavigation
@@ -14,6 +14,6 @@ plugin: navigation_block
 settings:
   id: navigation_block
   label: 'Stratos ERP Navigation'
-  provider: se_core
+  provider: stratoserp
   label_display: '0'
 visibility: {  }
