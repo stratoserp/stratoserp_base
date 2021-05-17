@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - stratoserp
+  theme:
+    - stratoserp_theme
+id: stratoserpnavigation
+theme: stratoserp_theme
+region: content
+weight: -4
+provider: null
+plugin: navigation_block
+settings:
+  id: navigation_block
+  label: 'Stratos ERP Navigation'
+  provider: stratoserp
+  label_display: '0'
+visibility: {  }
