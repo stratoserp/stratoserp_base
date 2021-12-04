@@ -85,18 +85,24 @@ dependencies:
   - se_ticket
   - se_timekeeping
 
-  # Document types
+  # Information & types
   - se_information
   - se_document
 
-  # Subscription types
+  # Subscription & types
   - se_subscription
+  - se_anti_virus
+  - se_backup
   - se_domain_hosting
   - se_domain_name
   - se_email_account
+  - se_firewall
   - se_managed_service
+  - se_office_365
+  - se_phone_system
 
-  # Item types
+  # Item & types
+  - se_item
   - se_assembly
   - se_service
   - se_stock
