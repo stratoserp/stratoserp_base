@@ -85,13 +85,8 @@ ol, ul {
   }
 }
 
-/* Other forms */
-.form-control {
-  width: auto;
-}
-
-/* Global node form customisations */
-.node-form,
+/* Global form customisations */
+.se-business-form,
 .se-item-form,
 .se-information-form {
   input, select, .select-wrapper, .table, .input-group, label {
@@ -297,37 +292,6 @@ ol, ul {
 
 }
 
-.layout {
-  .field--label,
-  .field--label-hidden,
-  .field__label {
-    clear: both;
-  }
-}
-
-.layout--twocol {
-  .layout__region {
-    padding: 5px;
-  }
-  .layout__region--top {
-    padding: 0;
-  }
-  .layout__region--bottom {
-    mark {
-      float: right;
-      padding: 1em;
-      background-color: #ff0;
-      border-radius: 50%;
-      position: absolute;
-      right: 0;
-    }
-    section article:nth-of-type(odd)  { background-color:#eee; }
-    section article:nth-of-type(even) { background-color:#fff; }
-    section article footer .layout--onecol {
-      padding: 0;
-    }
-  }
-}
 
 /* Views themeing */
 .view {
