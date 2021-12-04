@@ -12,39 +12,39 @@
         "php": ">=7.4",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "composer/installers": "^1.2",
-        "cweagans/composer-patches": "^1.6.5",
-        "drupal/admin_toolbar": "^2.3",
-        "drupal/bootstrap4": "^2.0",
+        "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/admin_toolbar": "^3.0",
+        "drupal/bootstrap4": "^2.1",
         "drupal/chartjs_api": "^1.1",
-        "drupal/core": "^9",
-        "drupal/core-composer-scaffold": "^9",
-        "drupal/date_popup": "^1.1",
-        "drupal/duration_field": "^2.0@rc",
-        "drupal/dynamic_entity_reference": "^1.10",
+        "drupal/core": "^9.3",
+        "drupal/core-composer-scaffold": "^9.3",
+        "drupal/duration_field": "^2.0",
+        "drupal/dynamic_entity_reference": "^1.12",
         "drupal/eva": "^2.1",
-        "drupal/extra_field": "^1.2",
-        "drupal/field_group": "dev-3.x",
-        "drupal/fullcalendar_view": "^5.0",
-        "drupal/geolocation": "^3.2",
-        "drupal/hook_event_dispatcher": "^2.1",
-        "drupal/linkit": "^6@dev",
+        "drupal/extra_field": "^2.1",
+        "drupal/field_group": "^3.2",
+        "drupal/fullcalendar_view": "^5.1",
+        "drupal/geolocation": "^3.7",
+        "drupal/hook_event_dispatcher": "^2.5",
+        "drupal/linkit": "^6.0",
         "drupal/multiple_fields_remove_button": "1.*@dev",
         "drupal/replicate": "^1.0",
         "drupal/replicate_ui": "^1.0",
-        "drupal/token": "^1.7",
+        "drupal/token": "^1.9",
         "drupal/toolbar_menu": "^2.2",
-        "drupal/twig_tweak": "^3.0",
-        "drupal/views_bulk_operations": "^3.9",
+        "drupal/tvi": "^1.0",
+        "drupal/twig_tweak": "^3.1",
+        "drupal/views_bulk_operations": "^4.0",
         "drupal/views_data_export": "dev-1.x",
         "drupal/webform": "^6.0",
         "drupal/xero": "dev-2.x",
         "drush/drush": "^10",
         "oomphinc/composer-installers-extender": "^2.0",
         "singularo/shepherd-drupal-scaffold": "dev-develop",
-        "vlucas/phpdotenv": "^5",
-        "webflo/drupal-finder": "^1.0.0",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
+        "vlucas/phpdotenv": "^5.1",
+        "webflo/drupal-finder": "^1.2",
+        "zaporylie/composer-drupal-optimizations": "^1.2"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -87,19 +87,9 @@
         "preserve-paths": [
             "web/sites"
         ],
-        "patches": {
-            "drupal/core": {
-                "Update window location on tab click": "https://www.drupal.org/files/issues/2021-05-16/vertical-tabs.patch"
-            },
-            "drupal/dynamic_entity_reference": {
-                "Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch"
-            },
-            "drupal/extra_field": {
-                "Allow form extra fields to be declared through ExtraField plugins": "https://www.drupal.org/files/issues/2019-01-17/extra_field-using_in_forms-2882061-24.patch"
-            }
-        },
+        "patches-file": "composer.patches.json",
         "patchLevel": {
-            "drupal/core": "-p1"
+            "drupal/core": "-p2"
         }
     }
 }
