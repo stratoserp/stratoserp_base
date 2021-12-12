@@ -47,6 +47,7 @@ dependencies:
   - admin_toolbar
   - admin_toolbar_tools
   - chartjs_api
+  - core_event_dispatcher
   - date_popup
   - duration_field
   - dynamic_entity_reference
