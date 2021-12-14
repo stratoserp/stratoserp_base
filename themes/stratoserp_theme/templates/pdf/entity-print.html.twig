@@ -1,13 +1,15 @@
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>{{ title }}</title>
-    {{ entity_print_css }}
+    <link rel="stylesheet" media="all" href="/profiles/contrib/stratoserp_base/themes/stratoserp_theme/css/print.css" />
   </head>
   <body>
     <h1>{{ node_type }}</h1>
+    {% if logo_path %}
     <img id="logo" alt="logo" src="file://{{ logo_path }}" />
-      {{ label }}
+    {%  endif %}
+    {{ label }}
     <div class="page">
       {{ content }}
     </div>
