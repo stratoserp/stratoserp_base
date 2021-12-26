@@ -41,7 +41,7 @@
         "drupal/xero": "dev-2.x",
         "drush/drush": "^10",
         "oomphinc/composer-installers-extender": "^2.0",
-        "singularo/shepherd-drupal-scaffold": "dev-develop",
+        "singularo/shepherd-drupal-scaffold": "dev-php8",
         "vlucas/phpdotenv": "^5.1",
         "webflo/drupal-finder": "^1.2",
         "zaporylie/composer-drupal-optimizations": "^1.2"
