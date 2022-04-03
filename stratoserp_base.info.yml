@@ -73,8 +73,8 @@ dependencies:
   - stratoserp
   - se_accounting
   - se_bill
-  - se_business
   - se_contact
+  - se_customer
   - se_goods_receipt
   - se_invoice
   - se_item_line
@@ -82,7 +82,9 @@ dependencies:
   - se_payment_line
   - se_purchase_order
   - se_quote
+  - se_relationship
   - se_report
+  - se_supplier
   - se_ticket
   - se_timekeeping
 
