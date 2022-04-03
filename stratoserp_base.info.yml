@@ -51,8 +51,9 @@ dependencies:
   - date_popup
   - duration_field
   - dynamic_entity_reference
-  - eva
+  - entity_print
   - extra_field
+  - eva
   - field_group
   - fullcalendar_view
   - geolocation
@@ -60,8 +61,6 @@ dependencies:
   - hook_event_dispatcher
   - linkit
   - multiple_fields_remove_button
-  - replicate
-  - replicate_ui
   - token
   - tvi
   - views_bulk_operations

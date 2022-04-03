@@ -21,6 +21,7 @@
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/duration_field": "^2.0",
         "drupal/dynamic_entity_reference": "^1.12",
+        "drupal/entity_print": "^2.4",
         "drupal/eva": "^2.1",
         "drupal/extra_field": "^2.1",
         "drupal/field_group": "^3.2",
@@ -28,23 +29,24 @@
         "drupal/geolocation": "^3.7",
         "drupal/hook_event_dispatcher": "^3.1",
         "drupal/linkit": "^6.0",
-        "drupal/multiple_fields_remove_button": "1.*@dev",
-        "drupal/replicate": "^1.0",
-        "drupal/replicate_ui": "^1.0",
         "drupal/token": "^1.9",
         "drupal/toolbar_menu": "^2.2",
         "drupal/tvi": "^1.0",
         "drupal/twig_tweak": "^3.1",
         "drupal/views_bulk_operations": "^4.0",
-        "drupal/views_data_export": "dev-1.x",
         "drupal/webform": "^6.0",
-        "drupal/xero": "dev-2.x",
-        "drush/drush": "^10",
         "oomphinc/composer-installers-extender": "^2.0",
         "singularo/shepherd-drupal-scaffold": "dev-php8",
         "vlucas/phpdotenv": "^5.1",
         "webflo/drupal-finder": "^1.2",
         "zaporylie/composer-drupal-optimizations": "^1.2"
+    },
+    "suggest": {
+        "drupal/drush": "Required for some of the utlity commands.",
+        "drupal/multiple_fields_remove_button": "Add remove button against each field in a list.",
+        "drupal/replicate": "Useful for making duplicates of quotes or similar.",
+        "drupal/replicate_ui": "Useful for making duplicates of quotes or similar.",
+        "drupal/xero": "Xero integration requires the xero module."
     },
     "conflict": {
         "drupal/drupal": "*"
