@@ -13,7 +13,7 @@ provider: null
 plugin: navigation_block
 settings:
   id: navigation_block
-  label: 'Stratos ERP Navigation'
+  label: 'StratosERP Navigation'
   provider: stratoserp
   label_display: '0'
 visibility: {  }

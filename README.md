@@ -1,11 +1,11 @@
 #
-# Stratos ERP base profile
+# StratosERP base profile
 #
 
 This repository contains the base install profile that is used by the
 composer quick install.
 
-To install Stratos ERP, follow the quickstart guide here:
+To install StratosERP, follow the quickstart guide here:
 https://github.com/stratoserp/stratos-drupal-project/blob/8.x/QUICKSTART.md
 
 Or use the docker command from:

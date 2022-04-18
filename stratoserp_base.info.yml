@@ -14,7 +14,6 @@ dependencies:
   - breakpoint
   - ckeditor
   - config
-  - comment
   - contextual
   - datetime
   - datetime_range
@@ -29,11 +28,9 @@ dependencies:
   - inline_form_errors
   - layout_discovery
   - menu_ui
-  - node
   - options
   - path
   - page_cache
-  #- search
   - taxonomy
   - telephone
   - token
@@ -60,7 +57,6 @@ dependencies:
   - geolocation_google_maps
   - hook_event_dispatcher
   - linkit
-  - multiple_fields_remove_button
   - token
   - tvi
   - views_bulk_operations
@@ -68,7 +64,7 @@ dependencies:
   - webform
   - webform_ui
 
-  # Stratos ERP
+  # Stratoserp
   - stratoserp
   - se_accounting
   - se_bill
@@ -117,6 +113,6 @@ themes:
   # Admin theme
   - seven
 
-  # Stratos ERP theme needs bootstrap for base theme
+  # StratosERP theme needs bootstrap for base theme
   - bootstrap4
   - stratoserp_theme
