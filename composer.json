@@ -34,7 +34,7 @@
         "drupal/tvi": "^1.0",
         "drupal/twig_tweak": "^3.1",
         "drupal/views_bulk_operations": "^4.0",
-        "drupal/webform": "^6.0",
+        "drupal/webform": "^6.1",
         "oomphinc/composer-installers-extender": "^2.0",
         "singularo/shepherd-drupal-scaffold": "dev-php8",
         "vlucas/phpdotenv": "^5.1",
