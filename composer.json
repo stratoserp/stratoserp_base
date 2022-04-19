@@ -46,6 +46,7 @@
         "drupal/multiple_fields_remove_button": "Add remove button against each field in a list.",
         "drupal/replicate": "Useful for making duplicates of quotes or similar.",
         "drupal/replicate_ui": "Useful for making duplicates of quotes or similar.",
+        "drupal/webform_views": "Provide views for webform integration.",
         "drupal/xero": "Xero integration requires the xero module."
     },
     "conflict": {
