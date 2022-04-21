@@ -61,8 +61,6 @@ dependencies:
   - tvi
   - views_bulk_operations
   - views_data_export
-  - webform
-  - webform_ui
 
   # Stratoserp
   - stratoserp
