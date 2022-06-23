@@ -1,5 +1,5 @@
-# Schema for the theme setting configuration file of the Stratos ERP theme.
+# Schema for the theme setting configuration file of the StratosERP theme.
 
 stratoserp_theme.settings:
   type: theme_settings
-  label: 'Stratos ERP theme settings'
+  label: 'StratosERP theme settings'

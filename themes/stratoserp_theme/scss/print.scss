@@ -208,3 +208,79 @@ nav {
     text-overflow: ellipsis;
   }
 }
+
+body {
+  margin: 1em;
+  background-color: #fff;
+  font-family: Verdana, Arial, Helvetica, serif;
+  font-size: 12px;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 1em;
+}
+
+.body {
+  font-family: Verdana, Arial, Helvetica, serif;
+  font-size: 12px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+}
+
+th {
+  border-bottom: 1px solid grey;
+  padding-bottom: 3px;
+}
+
+tr {
+  vertical-align: top;
+}
+
+.totals {
+  clear: both;
+  margin-bottom: 1em;
+  border-bottom: 1px solid black;
+}
+
+.field--name-se-total {
+  text-align: right;
+  padding-top: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-top: 1px solid black;
+}
+
+.field--name-se-outstanding {
+  text-align: right;
+  margin-bottom: 1em;
+  /*padding-bottom: 1em;*/
+}
+
+.tax_total {
+}
+
+.contact-details {
+  text-align: right;
+  clear: none;
+  float: right;
+}
+
+.bank-details {
+  text-align: left;
+  clear: right;
+  float: left;
+}
+
+.extra-msg {
+  text-align: left;
+  clear: both;
+}
+
+.print__wrapper {
+  display: none;
+}

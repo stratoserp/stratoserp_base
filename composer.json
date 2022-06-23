@@ -9,7 +9,7 @@
         { "type": "composer", "url": "https://asset-packagist.org" }
     ],
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.0",
         "ext-json": "*",
         "ext-mbstring": "*",
         "composer/installers": "^1.9",
@@ -34,7 +34,7 @@
         "drupal/tvi": "^1.0",
         "drupal/twig_tweak": "^3.1",
         "drupal/views_bulk_operations": "^4.0",
-        "drupal/webform": "^6.0",
+        "drupal/webform": "^6.1",
         "oomphinc/composer-installers-extender": "^2.0",
         "singularo/shepherd-drupal-scaffold": "dev-php8",
         "vlucas/phpdotenv": "^5.1",
@@ -46,6 +46,7 @@
         "drupal/multiple_fields_remove_button": "Add remove button against each field in a list.",
         "drupal/replicate": "Useful for making duplicates of quotes or similar.",
         "drupal/replicate_ui": "Useful for making duplicates of quotes or similar.",
+        "drupal/webform_views": "Provide views for webform integration.",
         "drupal/xero": "Xero integration requires the xero module."
     },
     "conflict": {
@@ -55,9 +56,6 @@
     "prefer-stable": true,
     "config": {
         "discard-changes": true,
-        "platform": {
-            "php": "7.4"
-        },
         "sort-packages": true
     },
     "extra": {
