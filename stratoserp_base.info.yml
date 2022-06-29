@@ -7,6 +7,7 @@ core_version_requirement: ^8 || ^9
 distribution:
   name: StratosERP
 
+# Required modules.
 dependencies:
   - action
   - block
@@ -23,19 +24,15 @@ dependencies:
   - field_ui
   - file
   - help
-  - history
   - image
   - inline_form_errors
   - layout_discovery
   - menu_ui
   - options
   - path
-  - page_cache
   - taxonomy
   - telephone
-  - token
   - toolbar
-  - tour
   - user
   - views
   - views_ui
@@ -48,7 +45,6 @@ dependencies:
   - date_popup
   - duration_field
   - dynamic_entity_reference
-  - entity_print
   - extra_field
   - eva
   - field_group
@@ -62,7 +58,7 @@ dependencies:
   - views_bulk_operations
   - views_data_export
 
-  # Stratoserp
+  # StratosERP
   - stratoserp
   - se_accounting
   - se_bill

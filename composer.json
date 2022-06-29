@@ -24,7 +24,6 @@
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/duration_field": "^2.0",
         "drupal/dynamic_entity_reference": "^1.12",
-        "drupal/entity_print": "^2.4",
         "drupal/eva": "^2.1",
         "drupal/extra_field": "^2.1",
         "drupal/field_group": "^3.2",
