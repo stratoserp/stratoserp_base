@@ -1,4 +1,4 @@
-name: Stratos BS
+name: StratosERP bootstrap theme
 type: theme
 description: 'Uses the Bootstrap framework Sass source files and must be compiled (not for beginners).'
 package: 'Bootstrap'

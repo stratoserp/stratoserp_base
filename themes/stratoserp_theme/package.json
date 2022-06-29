@@ -8,21 +8,24 @@
     "node": ">= 8.11"
   },
   "scripts": {
-    "style": "cross-env NODE_ENV=development ./node_modules/.bin/gulp style",
-    "watch": "cross-env NODE_ENV=development ./node_modules/.bin/gulp watch"
+    "build:sass": "sass scss/style.scss css/style.css",
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.1",
-    "cross-env": "^5.1.3",
-    "cssnano": "^4.1.10",
-    "gulp": "^4.0.2",
-    "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^2.6.5"
-  },
-  "dependencies": {
+    "@babel/core": "^7.0.0",
+    "autoprefixer": "^10.4.7",
+    "babel-plugin-add-header-comment": "^1.0.3",
     "compass": "^0.1.1",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-compass": "^2.1.0"
+    "cross-env": "^7.0.2",
+    "cssnano": "^5.1.12",
+    "glob": "^8.0.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rsync": "^0.0.9",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.53.0",
+    "sass-lint": "^1.13.1"
   }
 }
