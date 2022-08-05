@@ -17,8 +17,8 @@
         "drupal/admin_toolbar": "^3.0",
         "drupal/bootstrap4": "^2.1",
         "drupal/chartjs_api": "^1.1",
-        "drupal/core": "^9.3",
-        "drupal/core-composer-scaffold": "^9.3",
+        "drupal/core": "^9.4",
+        "drupal/core-composer-scaffold": "^9.4",
         "drupal/duration_field": "^2.0",
         "drupal/dynamic_entity_reference": "^1.12",
         "drupal/entity_print": "^2.4",
@@ -56,7 +56,15 @@
     "prefer-stable": true,
     "config": {
         "discard-changes": true,
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "cweagans/composer-patches": true,
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "zaporylie/composer-drupal-optimizations": true,
+            "oomphinc/composer-installers-extender": true,
+            "singularo/shepherd-drupal-scaffold": true
+        }
     },
     "extra": {
         "composer-exit-on-patch-failure": true,
