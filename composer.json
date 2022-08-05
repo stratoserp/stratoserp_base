@@ -39,7 +39,6 @@
         "drupal/views_bulk_operations": "^4.0",
         "drupal/webform": "^6.1",
         "drush/drush": "^11",
-        "guzzlehttp/guzzle": "7.4.5 as 6.5.8",
         "oomphinc/composer-installers-extender": "^2.0",
         "singularo/shepherd-drupal-scaffold": "dev-develop",
         "vlucas/phpdotenv": "^5.1",
