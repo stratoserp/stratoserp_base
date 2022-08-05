@@ -7,7 +7,7 @@
 //@import "../../contrib/bootstrap4/scss/style";
 
 // OR test new Bootstrap 4.5.0
-@import "../../../../../themes/contrib/bootstrap4/scss/style";
+@import '/code/web/themes/contrib/bootstrap4/scss/style.scss';
 
 // Include custom sub theme.
 @import 'custom/variables';

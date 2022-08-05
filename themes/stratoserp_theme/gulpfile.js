@@ -1,9 +1,10 @@
-const gulp = require('gulp'),
-  sass = require('gulp-sass'),
-  postcss = require('gulp-postcss'),
-  autoprefixer = require('autoprefixer'),
-  cssnano = require('cssnano'),
-  sourcemaps = require('gulp-sourcemaps');
+const gulp = require('gulp');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const sourcemaps = require('gulp-sourcemaps');
+const sass = require('gulp-sass')(require('sass'));
+const rsync = require('gulp-rsync');
 
 const paths = {
   styles: {
@@ -21,6 +22,7 @@ function style() {
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.styles.dest))
+    .pipe(rsync({destination: '../../../profiles/contrib/stratoserp_base/themes/stratoserp_theme/'}))
 }
 
 function watch() {
