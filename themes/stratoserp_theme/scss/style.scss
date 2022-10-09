@@ -7,7 +7,7 @@
 //@import "../../contrib/bootstrap4/scss/style";
 
 // OR test new Bootstrap 4.5.0
-@import '/code/web/themes/contrib/bootstrap4/scss/style.scss';
+@import 'overrides/bootstrap_path';
 
 // Include custom sub theme.
 @import 'custom/variables';
@@ -80,6 +80,14 @@ div.vertical-tabs__panes {
   }
   .layout__region--top {
     padding: 0;
+  }
+  .layout__middle {
+    display: flex;
+    width: 100%;
+    .layout__region--first,
+    .layout__region--second {
+      flex-grow: 1
+    }
   }
   .layout__region--bottom {
     mark {
