@@ -9797,25 +9797,19 @@ nav .toolbar-menu ::before {
 nav .toolbar-menu .toolbar-icon-link-toolbar-menu-stratoserp-home::before {
   background-image: url(../icons/house.svg);
 }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-customer-list-page-1::before {
-  background-image: url(../icons/person.svg);
+nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-customer-list-se-customer-list::before {
+  background-image: url(../icons/people.svg);
 }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-information-list-page-1::before {
+nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-item-list-se-item-list::before {
+  background-image: url(../icons/puzzlepiece.svg);
+}
+nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-supplier-list-se-supplier-list::before {
   background-image: url(../icons/file.svg);
 }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-item-list-page-1::before {
-  background-image: url(../icons/puzzlepiece.svg);
-}
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-stock-item-list-page-1::before {
-  background-image: url(../icons/puzzlepiece.svg);
-}
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-supplier-list-page-1::before {
-  background-image: url(../icons/person.svg);
-}
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-ticket-list-page-1::before {
+nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-ticket-list-se-ticket-list::before {
   background-image: url(../icons/wrench.svg);
 }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-timekeeping-list-page-1::before {
+nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-timekeeping-list-se-timekeeping-list::before {
   background-image: url(../icons/cog.svg);
 }
 

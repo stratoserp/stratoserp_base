@@ -1,0 +1,4 @@
+// If compiling inside docker:
+// @import '/code/web/themes/contrib/bootstrap4/scss/style.scss';
+// If compiling on the host:
+@import '../../../../../../themes/contrib/bootstrap4/scss/style.scss';

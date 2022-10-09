@@ -8,7 +8,7 @@
     "node": ">= 8.11"
   },
   "scripts": {
-    "build:sass": "sass scss/style.scss css/style.css",
+    "build:sass": "sass scss/style.scss css/style.css"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

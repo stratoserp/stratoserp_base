@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./node_modules/.bin/gulp watch
+npm run build:sass
