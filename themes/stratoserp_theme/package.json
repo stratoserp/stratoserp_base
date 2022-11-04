@@ -7,9 +7,6 @@
     "yarn": ">= 1.6",
     "node": ">= 8.11"
   },
-  "scripts": {
-    "build:sass": "sass scss/style.scss css/style.css"
-  },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "autoprefixer": "^10.4.7",

@@ -73,6 +73,7 @@ dependencies:
   - se_quote
   - se_relationship
   - se_report
+  - se_store
   - se_supplier
   - se_ticket
   - se_timekeeping

@@ -4,6 +4,11 @@ global-styling:
     theme:
       css/style.css: {}
 
+print:
+  css:
+    theme:
+      css/print.css: {}
+
 bootstrap-scripts:
   js:
     bootstrap/assets/javascripts/bootstrap/affix.js: {}

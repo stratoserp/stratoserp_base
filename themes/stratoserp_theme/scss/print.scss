@@ -1,0 +1,211 @@
+// Include bootstrap variables definitions overrides.
+@import 'overrides/variables';
+
+// Include parent theme with all things Bootstrap for full override.
+// Relative path to this styles.scss file.
+// Example: @import "../../../../../themes/contrib/bootstrap4/scss/style";
+//@import "../../contrib/bootstrap4/scss/style";
+
+// OR test new Bootstrap 4.5.0
+@import 'overrides/bootstrap_path';
+
+// Include custom sub theme.
+@import 'custom/variables';
+
+.form-control {
+  width: unset;
+}
+
+/* Fix wkhtmltopdf compatibility with BS flex features */
+.row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.row > div {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.row > div:last-child {
+  margin-right: 0;
+}
+/* Fix wkhtmltopdf compatibility with BS tables borders */
+
+/* Requires cellspacing="0" on table to prevent spacing */
+table {
+  border-collapse: separate !important;
+}
+th, td {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+/* End fixes. */
+
+.form-item {
+  margin: .5rem 0 .5rem 0;
+  label {
+    margin-bottom: .25rem;
+  }
+}
+
+body {
+  font-family: Verdana, Arial, Helvetica, serif;
+  font-size: 12px;
+  margin: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+}
+
+/* From entity_print defaults. */
+.page {
+  padding: 20px;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  td img {
+    max-width: none;
+  }
+}
+
+th {
+  border-bottom: 1px solid grey;
+  padding-bottom: 3px;
+}
+
+tr {
+  vertical-align: top;
+}
+
+/* Debugging
+* {
+  outline: 1px dotted red;
+}
+*/
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.bank-details {
+  text-align: left;
+  clear: right;
+  float: left;
+}
+
+.contact-details {
+  text-align: right;
+  clear: none;
+  float: right;
+}
+
+
+/* Hide things we don't want to display */
+.field--name-se-sent {
+  display: none;
+}
+
+.print__wrapper {
+  display: none;
+}
+
+/* The main line item information */
+.se-bill, .se-goods-receipt, .se-invoice, .se-payment, .se-purchase-order, .se-quote, .se-ticket {
+  .field {
+    display: flex;
+    display: -webkit-box;
+    align-content: space-between;
+    -webkit-justify-content: space-between;
+
+    .field__label {
+      width: 5rem;
+    }
+
+    .field__item {
+      width: 10rem;
+    }
+  }
+
+  .layout--twocol {
+
+    .layout__region--top {
+      width: 100%;
+      padding: 5px;
+    }
+
+    .layout__middle {
+      width: 100%;
+      display: flex;
+      display: -webkit-box;
+      align-content: space-between;
+      -webkit-justify-content: space-between;
+
+      .layout__region--first {
+        width: 48%
+      }
+
+      .layout__region--second {
+        width: 48%
+      }
+
+    }
+
+    .layout__region--bottom {
+      width: 100%;
+      padding: 5px;
+      display: flex;
+      display: -webkit-flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-direction: column;
+
+      table {
+        width: 100%;
+        margin-bottom: 0;
+        border-spacing: 0;
+
+        tr {
+          margin-bottom: 1rem;
+
+          th, td {
+            padding: 0;
+
+          }
+
+          th.notes, td.notes {
+            width: 50%;
+          }
+        }
+      }
+
+      .field {
+        display: flex;
+        display: -webkit-flex;
+      }
+
+      .field--name-se-outstanding,
+      .field--name-se-total {
+        justify-content: flex-end;
+        -webkit-box-pack: end;
+        border-bottom: 1px solid #ccc;
+
+        //.field__label {
+          //display: inline;
+        //}
+        .field__item {
+          text-align: right;
+        }
+      }
+    }
+
+  }
+
+}
