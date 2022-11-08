@@ -24,7 +24,7 @@
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/duration_field": "^2.0",
         "drupal/dynamic_entity_reference": "^1.12",
-        "drupal/eva": "^2.1",
+        "drupal/eva": "^3.0",
         "drupal/extra_field": "^2.1",
         "drupal/field_group": "^3.2",
         "drupal/fullcalendar_view": "^5.1",
@@ -35,7 +35,6 @@
         "drupal/toolbar_menu": "^2.2",
         "drupal/tvi": "^1.0",
         "drupal/twig_tweak": "^3.1",
-        "drupal/username_enumeration_prevention": "^1.2",
         "drupal/views_bulk_operations": "^4.0",
         "drupal/webform": "^6.1",
         "drush/drush": "^11",
@@ -46,8 +45,6 @@
         "zaporylie/composer-drupal-optimizations": "^1.2"
     },
     "suggest": {
-        "drupal/drush": "Required for some of the utlity commands.",
-        "drupal/multiple_fields_remove_button": "Add remove button against each field in a list.",
         "drupal/replicate": "Useful for making duplicates of quotes or similar.",
         "drupal/replicate_ui": "Useful for making duplicates of quotes or similar.",
         "drupal/webform_views": "Provide views for webform integration.",

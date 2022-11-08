@@ -54,7 +54,7 @@ th, td {
 body {
   font-family: Verdana, Arial, Helvetica, serif;
   font-size: 12px;
-  margin: 1rem;
+  margin: .75rem;
 }
 
 table {
@@ -84,29 +84,63 @@ tr {
   vertical-align: top;
 }
 
-/* Debugging
-* {
-  outline: 1px dotted red;
-}
-*/
+/* Debugging */
+//* {
+//  outline: 1px dotted red;
+//}
 
-.logo img {
-  width: 100px;
-  height: 100px;
-}
+.entity-print-se-invoice {
+  line-height: 1.2;
 
-.bank-details {
-  text-align: left;
-  clear: right;
-  float: left;
-}
+  .logo {
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin-right: .75rem;
+    img {
+      width: 90px;
+      height: 90px;
+      float: left
+    }
+  }
 
-.contact-details {
-  text-align: right;
-  clear: none;
-  float: right;
-}
+  .company-address {
 
+  }
+
+  .details {
+    h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    text-align: right;
+  }
+
+  .bill-to {
+    text-align: left;
+    clear: both;
+    padding-left: 100px;
+    padding-bottom: 2em;
+  }
+
+  .info-pane {
+    table {
+      width: auto;
+    }
+  }
+
+  .bank-details {
+    text-align: left;
+    clear: right;
+    float: left;
+  }
+
+  .contact-details {
+    text-align: right;
+    clear: none;
+    float: right;
+  }
+}
 
 /* Hide things we don't want to display */
 .field--name-se-sent {

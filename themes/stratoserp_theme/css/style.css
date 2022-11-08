@@ -8222,6 +8222,10 @@ div.vertical-tabs__panes {
   display: inline-block;
   width: 100%; }
 
+/* Stop the 'Remove' buttons on forms being on a new line */
+td .form-item {
+  display: inline-block; }
+
 .row {
   margin-top: .5rem; }
   .row .node--type-se-ticket .comment .content {
@@ -8238,6 +8242,8 @@ div.vertical-tabs__panes {
 
 .layout--twocol .layout__region {
   padding: 5px; }
+  .layout--twocol .layout__region .tabledrag-toggle-weight-wrapper {
+    display: none; }
 .layout--twocol .layout__region--top {
   padding: 0; }
 .layout--twocol .layout__middle {
@@ -8282,32 +8288,19 @@ div.vertical-tabs__panes {
 .pager .pager-item {
   min-width: 33px; }
 
-nav .toolbar-tab .toolbar-icon-toolbar-menu-stratoserp::before {
+nav .toolbar-tab .toolbar-icon-toolbar-menu-stratoserp:before {
   background-image: url(../icons/stratoserp.svg); }
-nav .toolbar-menu ::before {
-  position: absolute;
-  top: 0;
-  left: 0.6667em;
-  display: block;
-  width: 20px;
-  height: 100%;
-  content: "";
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: 100% auto; }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-stratoserp-home::before {
+nav .toolbar-menu .toolbar-icon-link-toolbar-menu-stratoserp-home:before {
   background-image: url(../icons/house.svg); }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-customer-list-se-customer-list::before {
+nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-customer-list-se-customer-list:before {
   background-image: url(../icons/people.svg); }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-item-list-se-item-list::before {
+nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-item-list-se-item-list:before {
   background-image: url(../icons/puzzlepiece.svg); }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-supplier-list-se-supplier-list::before {
+nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-supplier-list-se-supplier-list:before {
   background-image: url(../icons/file.svg); }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-ticket-list-se-ticket-list::before {
+nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-ticket-list-se-ticket-list:before {
   background-image: url(../icons/wrench.svg); }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-timekeeping-list-se-timekeeping-list::before {
+nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-timekeeping-list-se-timekeeping-list:before {
   background-image: url(../icons/cog.svg); }
 
 .view .views-field-se-gr-total,

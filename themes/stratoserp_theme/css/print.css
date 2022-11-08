@@ -8246,7 +8246,7 @@ th, td {
 body {
   font-family: Verdana, Arial, Helvetica, serif;
   font-size: 12px;
-  margin: 1rem; }
+  margin: .75rem; }
 
 table {
   border-collapse: collapse;
@@ -8269,24 +8269,38 @@ th {
 tr {
   vertical-align: top; }
 
-/* Debugging
-* {
-  outline: 1px dotted red;
-}
-*/
-.logo img {
-  width: 100px;
-  height: 100px; }
-
-.bank-details {
-  text-align: left;
-  clear: right;
-  float: left; }
-
-.contact-details {
-  text-align: right;
-  clear: none;
-  float: right; }
+/* Debugging */
+.entity-print-se-invoice {
+  line-height: 1.2; }
+  .entity-print-se-invoice .logo {
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin-right: .75rem; }
+    .entity-print-se-invoice .logo img {
+      width: 90px;
+      height: 90px;
+      float: left; }
+  .entity-print-se-invoice .details {
+    text-align: right; }
+    .entity-print-se-invoice .details h1 {
+      font-size: 1.5rem;
+      font-weight: bold; }
+  .entity-print-se-invoice .bill-to {
+    text-align: left;
+    clear: both;
+    padding-left: 100px;
+    padding-bottom: 2em; }
+  .entity-print-se-invoice .info-pane table {
+    width: auto; }
+  .entity-print-se-invoice .bank-details {
+    text-align: left;
+    clear: right;
+    float: left; }
+  .entity-print-se-invoice .contact-details {
+    text-align: right;
+    clear: none;
+    float: right; }
 
 /* Hide things we don't want to display */
 .field--name-se-sent {

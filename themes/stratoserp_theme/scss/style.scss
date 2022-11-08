@@ -38,6 +38,11 @@ div.vertical-tabs__panes {
   width: 100%;
 }
 
+/* Stop the 'Remove' buttons on forms being on a new line */
+td .form-item {
+  display: inline-block;
+}
+
 // Add some blank space at the top of the page.
 .row {
   margin-top: .5rem;
@@ -73,6 +78,11 @@ div.vertical-tabs__panes {
 .layout--twocol {
   .layout__region {
     padding: 5px;
+
+    // Hide the table drag row weights prompt.
+    .tabledrag-toggle-weight-wrapper {
+      display: none;
+    }
   }
   .layout__region--top {
     padding: 0;
@@ -141,44 +151,29 @@ div.vertical-tabs__panes {
 nav {
   .toolbar-tab {
     // Icon for system menu entry.
-    .toolbar-icon-toolbar-menu-stratoserp::before {
+    .toolbar-icon-toolbar-menu-stratoserp:before {
       background-image: url(../icons/stratoserp.svg);
     }
   }
 
   .toolbar-menu {
-    ::before {
-      position: absolute;
-      top: 0;
-      left: 0.6667em;
-      display: block;
-      width: 20px;
-      height: 100%;
-      content: "";
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      background-position: center center;
-      background-size: 100% auto;
-    }
-
     // Icons for StratosERP entries.
-    .toolbar-icon-link-toolbar-menu-stratoserp-home::before {
+    .toolbar-icon-link-toolbar-menu-stratoserp-home:before {
       background-image: url(../icons/house.svg);
     }
-    .toolbar-icon-link-toolbar-menu-views-view-views-se-customer-list-se-customer-list::before {
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-customer-list-se-customer-list:before {
       background-image: url(../icons/people.svg);
     }
-    .toolbar-icon-link-toolbar-menu-views-view-views-se-item-list-se-item-list::before {
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-item-list-se-item-list:before {
       background-image: url(../icons/puzzlepiece.svg);
     }
-    .toolbar-icon-link-toolbar-menu-views-view-views-se-supplier-list-se-supplier-list::before {
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-supplier-list-se-supplier-list:before {
       background-image: url(../icons/file.svg);
     }
-    .toolbar-icon-link-toolbar-menu-views-view-views-se-ticket-list-se-ticket-list::before {
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-ticket-list-se-ticket-list:before {
       background-image: url(../icons/wrench.svg);
     }
-    .toolbar-icon-link-toolbar-menu-views-view-views-se-timekeeping-list-se-timekeeping-list::before {
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-timekeeping-list-se-timekeeping-list:before {
       background-image: url(../icons/cog.svg);
     }
   }
