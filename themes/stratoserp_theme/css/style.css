@@ -8218,6 +8218,10 @@ code {
     margin: 0;
     display: inline-block; }
 
+div#edit-actions .btn, div#edit-actions a.button, div#edit-actions a.button {
+  margin-left: 0;
+  margin-right: 0; }
+
 div.vertical-tabs__panes {
   display: inline-block;
   width: 100%; }
@@ -8251,7 +8255,9 @@ td .form-item {
   width: 100%; }
   .layout--twocol .layout__middle .layout__region--first,
   .layout--twocol .layout__middle .layout__region--second {
-    flex-grow: 1; }
+    flex-grow: 1;
+    white-space: normal;
+    width: 50%; }
 .layout--twocol .layout__region--bottom mark {
   float: right;
   padding: 1em;
@@ -8265,6 +8271,24 @@ td .form-item {
   background-color: #fff; }
 .layout--twocol .layout__region--bottom section article footer .layout--onecol {
   padding: 0; }
+.layout--twocol .layout__region--bottom #se-item-lines-add-more-wrapper > div > div.clearfix,
+.layout--twocol .layout__region--bottom #se-payment-lines-add-more-wrapper > div > div.clearfix {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+  .layout--twocol .layout__region--bottom #se-item-lines-add-more-wrapper > div > div.clearfix .field-add-more-submit,
+  .layout--twocol .layout__region--bottom #se-item-lines-add-more-wrapper > div > div.clearfix .field-recalculate-submit,
+  .layout--twocol .layout__region--bottom #se-payment-lines-add-more-wrapper > div > div.clearfix .field-add-more-submit,
+  .layout--twocol .layout__region--bottom #se-payment-lines-add-more-wrapper > div > div.clearfix .field-recalculate-submit {
+    margin: 0 16px 0 0; }
+.layout--twocol .layout__region--bottom table .btn, .layout--twocol .layout__region--bottom table a.button {
+  height: 40px; }
+.layout--twocol .layout__region--bottom .field--type-se-currency {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+  .layout--twocol .layout__region--bottom .field--type-se-currency label, .layout--twocol .layout__region--bottom .field--type-se-currency input {
+    display: inline-flex; }
 
 #stratoserp-search-form input.button {
   margin-left: unset;

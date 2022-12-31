@@ -12,7 +12,7 @@
 // Include custom sub theme.
 @import 'custom/variables';
 
-// Ensure that the list of extra function buttons dpes the right thing.
+// Ensure that the list of extra function buttons does the right thing.
 .block-stratoserp {
   .item-list {
     li {
@@ -29,6 +29,13 @@
         }
       }
     }
+  }
+}
+
+div#edit-actions {
+  .btn, a.button {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -92,7 +99,9 @@ td .form-item {
     width: 100%;
     .layout__region--first,
     .layout__region--second {
-      flex-grow: 1
+      flex-grow: 1;
+      white-space: normal;
+      width: 50%;
     }
   }
   .layout__region--bottom {
@@ -108,6 +117,35 @@ td .form-item {
     section article:nth-of-type(even) { background-color:#fff; }
     section article footer .layout--onecol {
       padding: 0;
+    }
+
+    #se-item-lines-add-more-wrapper,
+    #se-payment-lines-add-more-wrapper {
+      // Button region
+      > div > div.clearfix {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        .field-add-more-submit,
+        .field-recalculate-submit {
+          margin: 0 16px 0 0;
+        }
+      }
+
+    }
+
+    table .btn {
+      height: 40px;
+    }
+
+    .field--type-se-currency {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      label, input {
+        display: inline-flex;
+      }
     }
   }
 }

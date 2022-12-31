@@ -89,7 +89,8 @@ tr {
 //  outline: 1px dotted red;
 //}
 
-.entity-print-se-invoice {
+.entity-print-se-invoice,
+.entity-print-se-quote {
   line-height: 1.2;
 
   .logo {
@@ -211,7 +212,6 @@ tr {
 
           th, td {
             padding: 0;
-
           }
 
           th.notes, td.notes {
@@ -226,14 +226,12 @@ tr {
       }
 
       .field--name-se-outstanding,
+      .field--name-se-tax,
       .field--name-se-total {
         justify-content: flex-end;
         -webkit-box-pack: end;
         border-bottom: 1px solid #ccc;
 
-        //.field__label {
-          //display: inline;
-        //}
         .field__item {
           text-align: right;
         }

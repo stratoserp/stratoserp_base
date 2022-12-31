@@ -2,7 +2,7 @@ name: StratosERP
 type: profile
 description: 'StratosERP base install.'
 version: VERSION
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^19
 
 distribution:
   name: StratosERP

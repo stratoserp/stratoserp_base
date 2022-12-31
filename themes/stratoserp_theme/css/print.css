@@ -8270,34 +8270,43 @@ tr {
   vertical-align: top; }
 
 /* Debugging */
-.entity-print-se-invoice {
+.entity-print-se-invoice,
+.entity-print-se-quote {
   line-height: 1.2; }
-  .entity-print-se-invoice .logo {
+  .entity-print-se-invoice .logo,
+  .entity-print-se-quote .logo {
     width: 90px;
     height: 90px;
     float: left;
     margin-right: .75rem; }
-    .entity-print-se-invoice .logo img {
+    .entity-print-se-invoice .logo img,
+    .entity-print-se-quote .logo img {
       width: 90px;
       height: 90px;
       float: left; }
-  .entity-print-se-invoice .details {
+  .entity-print-se-invoice .details,
+  .entity-print-se-quote .details {
     text-align: right; }
-    .entity-print-se-invoice .details h1 {
+    .entity-print-se-invoice .details h1,
+    .entity-print-se-quote .details h1 {
       font-size: 1.5rem;
       font-weight: bold; }
-  .entity-print-se-invoice .bill-to {
+  .entity-print-se-invoice .bill-to,
+  .entity-print-se-quote .bill-to {
     text-align: left;
     clear: both;
     padding-left: 100px;
     padding-bottom: 2em; }
-  .entity-print-se-invoice .info-pane table {
+  .entity-print-se-invoice .info-pane table,
+  .entity-print-se-quote .info-pane table {
     width: auto; }
-  .entity-print-se-invoice .bank-details {
+  .entity-print-se-invoice .bank-details,
+  .entity-print-se-quote .bank-details {
     text-align: left;
     clear: right;
     float: left; }
-  .entity-print-se-invoice .contact-details {
+  .entity-print-se-invoice .contact-details,
+  .entity-print-se-quote .contact-details {
     text-align: right;
     clear: none;
     float: right; }
@@ -8354,23 +8363,37 @@ tr {
     display: flex;
     display: -webkit-flex; }
   .se-bill .layout--twocol .layout__region--bottom .field--name-se-outstanding,
+  .se-bill .layout--twocol .layout__region--bottom .field--name-se-tax,
   .se-bill .layout--twocol .layout__region--bottom .field--name-se-total, .se-goods-receipt .layout--twocol .layout__region--bottom .field--name-se-outstanding,
+  .se-goods-receipt .layout--twocol .layout__region--bottom .field--name-se-tax,
   .se-goods-receipt .layout--twocol .layout__region--bottom .field--name-se-total, .se-invoice .layout--twocol .layout__region--bottom .field--name-se-outstanding,
+  .se-invoice .layout--twocol .layout__region--bottom .field--name-se-tax,
   .se-invoice .layout--twocol .layout__region--bottom .field--name-se-total, .se-payment .layout--twocol .layout__region--bottom .field--name-se-outstanding,
+  .se-payment .layout--twocol .layout__region--bottom .field--name-se-tax,
   .se-payment .layout--twocol .layout__region--bottom .field--name-se-total, .se-purchase-order .layout--twocol .layout__region--bottom .field--name-se-outstanding,
+  .se-purchase-order .layout--twocol .layout__region--bottom .field--name-se-tax,
   .se-purchase-order .layout--twocol .layout__region--bottom .field--name-se-total, .se-quote .layout--twocol .layout__region--bottom .field--name-se-outstanding,
+  .se-quote .layout--twocol .layout__region--bottom .field--name-se-tax,
   .se-quote .layout--twocol .layout__region--bottom .field--name-se-total, .se-ticket .layout--twocol .layout__region--bottom .field--name-se-outstanding,
+  .se-ticket .layout--twocol .layout__region--bottom .field--name-se-tax,
   .se-ticket .layout--twocol .layout__region--bottom .field--name-se-total {
     justify-content: flex-end;
     -webkit-box-pack: end;
     border-bottom: 1px solid #ccc; }
     .se-bill .layout--twocol .layout__region--bottom .field--name-se-outstanding .field__item,
+    .se-bill .layout--twocol .layout__region--bottom .field--name-se-tax .field__item,
     .se-bill .layout--twocol .layout__region--bottom .field--name-se-total .field__item, .se-goods-receipt .layout--twocol .layout__region--bottom .field--name-se-outstanding .field__item,
+    .se-goods-receipt .layout--twocol .layout__region--bottom .field--name-se-tax .field__item,
     .se-goods-receipt .layout--twocol .layout__region--bottom .field--name-se-total .field__item, .se-invoice .layout--twocol .layout__region--bottom .field--name-se-outstanding .field__item,
+    .se-invoice .layout--twocol .layout__region--bottom .field--name-se-tax .field__item,
     .se-invoice .layout--twocol .layout__region--bottom .field--name-se-total .field__item, .se-payment .layout--twocol .layout__region--bottom .field--name-se-outstanding .field__item,
+    .se-payment .layout--twocol .layout__region--bottom .field--name-se-tax .field__item,
     .se-payment .layout--twocol .layout__region--bottom .field--name-se-total .field__item, .se-purchase-order .layout--twocol .layout__region--bottom .field--name-se-outstanding .field__item,
+    .se-purchase-order .layout--twocol .layout__region--bottom .field--name-se-tax .field__item,
     .se-purchase-order .layout--twocol .layout__region--bottom .field--name-se-total .field__item, .se-quote .layout--twocol .layout__region--bottom .field--name-se-outstanding .field__item,
+    .se-quote .layout--twocol .layout__region--bottom .field--name-se-tax .field__item,
     .se-quote .layout--twocol .layout__region--bottom .field--name-se-total .field__item, .se-ticket .layout--twocol .layout__region--bottom .field--name-se-outstanding .field__item,
+    .se-ticket .layout--twocol .layout__region--bottom .field--name-se-tax .field__item,
     .se-ticket .layout--twocol .layout__region--bottom .field--name-se-total .field__item {
       text-align: right; }
 
