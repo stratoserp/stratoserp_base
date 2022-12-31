@@ -8209,135 +8209,192 @@ a.tabledrag-handle .handle {
 code {
   overflow-y: auto; }
 
-.block-stratoserp .item-list li {
-  display: inline-block;
-  margin: 0 0.25rem 0.25rem 0; }
-  .block-stratoserp .item-list li .btn, .block-stratoserp .item-list li a.button {
-    padding: .2rem .4rem; }
-  .block-stratoserp .item-list li form .form-item, .block-stratoserp .item-list li form input {
-    margin: 0;
-    display: inline-block; }
-
-div#edit-actions .btn, div#edit-actions a.button, div#edit-actions a.button {
-  margin-left: 0;
-  margin-right: 0; }
-
-div.vertical-tabs__panes {
-  display: inline-block;
-  width: 100%; }
-
-/* Stop the 'Remove' buttons on forms being on a new line */
-td .form-item {
-  display: inline-block; }
-
-.row {
-  margin-top: .5rem; }
-  .row .node--type-se-ticket .comment .content {
-    padding-top: .5rem; }
-  .row .node--type-se-ticket .layout__region--bottom {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-  .row .node--type-se-ticket .comment-se-timekeeping-form .layout__region {
-    padding: .25rem; }
-
-.layout .field--label,
-.layout .field--label-hidden,
-.layout .field__label {
-  clear: both; }
-
-.layout--twocol .layout__region {
-  padding: 5px; }
-  .layout--twocol .layout__region .tabledrag-toggle-weight-wrapper {
-    display: none; }
-.layout--twocol .layout__region--top {
-  padding: 0; }
-.layout--twocol .layout__middle {
-  display: flex;
-  width: 100%; }
-  .layout--twocol .layout__middle .layout__region--first,
-  .layout--twocol .layout__middle .layout__region--second {
-    flex-grow: 1;
-    white-space: normal;
-    width: 50%; }
-.layout--twocol .layout__region--bottom mark {
-  float: right;
-  padding: 1em;
-  background-color: #ff0;
-  border-radius: 50%;
-  position: absolute;
-  right: 0; }
-.layout--twocol .layout__region--bottom section article:nth-of-type(odd) {
-  background-color: #eee; }
-.layout--twocol .layout__region--bottom section article:nth-of-type(even) {
-  background-color: #fff; }
-.layout--twocol .layout__region--bottom section article footer .layout--onecol {
-  padding: 0; }
-.layout--twocol .layout__region--bottom #se-item-lines-add-more-wrapper > div > div.clearfix,
-.layout--twocol .layout__region--bottom #se-payment-lines-add-more-wrapper > div > div.clearfix {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start; }
-  .layout--twocol .layout__region--bottom #se-item-lines-add-more-wrapper > div > div.clearfix .field-add-more-submit,
-  .layout--twocol .layout__region--bottom #se-item-lines-add-more-wrapper > div > div.clearfix .field-recalculate-submit,
-  .layout--twocol .layout__region--bottom #se-payment-lines-add-more-wrapper > div > div.clearfix .field-add-more-submit,
-  .layout--twocol .layout__region--bottom #se-payment-lines-add-more-wrapper > div > div.clearfix .field-recalculate-submit {
-    margin: 0 16px 0 0; }
-.layout--twocol .layout__region--bottom table .btn, .layout--twocol .layout__region--bottom table a.button {
-  height: 40px; }
-.layout--twocol .layout__region--bottom .field--type-se-currency {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end; }
-  .layout--twocol .layout__region--bottom .field--type-se-currency label, .layout--twocol .layout__region--bottom .field--type-se-currency input {
-    display: inline-flex; }
-
-#stratoserp-search-form input.button {
-  margin-left: unset;
-  margin-right: unset; }
-
 .form-control {
   width: unset; }
 
+/* Fix wkhtmltopdf compatibility with BS flex features */
+.row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center; }
+
+.row > div {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1; }
+
+.row > div:last-child {
+  margin-right: 0; }
+
+/* Fix wkhtmltopdf compatibility with BS tables borders */
+/* Requires cellspacing="0" on table to prevent spacing */
+table {
+  border-collapse: separate !important; }
+
+th, td {
+  border-top: none;
+  border-left: none;
+  border-right: none; }
+
+/* End fixes. */
 .form-item {
   margin: .5rem 0 .5rem 0; }
   .form-item label {
     margin-bottom: .25rem; }
 
-.pager li.btn {
-  padding: unset;
-  border: unset;
-  min-width: 33px; }
-.pager li a {
-  display: inline-block;
-  padding: 0 .75rem 0 .75rem; }
-.pager .pager-item {
-  min-width: 33px; }
+body {
+  font-family: Verdana, Arial, Helvetica, serif;
+  font-size: 12px;
+  margin: .75rem; }
 
-nav .toolbar-tab .toolbar-icon-toolbar-menu-stratoserp:before {
-  background-image: url(../icons/stratoserp.svg); }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-stratoserp-home:before {
-  background-image: url(../icons/house.svg); }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-customer-list-se-customer-list:before {
-  background-image: url(../icons/people.svg); }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-item-list-se-item-list:before {
-  background-image: url(../icons/puzzlepiece.svg); }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-supplier-list-se-supplier-list:before {
-  background-image: url(../icons/file.svg); }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-ticket-list-se-ticket-list:before {
-  background-image: url(../icons/wrench.svg); }
-nav .toolbar-menu .toolbar-icon-link-toolbar-menu-views-view-views-se-timekeeping-list-se-timekeeping-list:before {
-  background-image: url(../icons/cog.svg); }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px; }
 
-.view .views-field-se-gr-total,
-.view .views-field-se-in-total,
-.view .views-field-se-pa-total,
-.view .views-field-se-po-total,
-.view .views-field-se-qu-total {
-  text-align: right; }
-.view .views-field-se-it-cost-price,
-.view .views-field-se-it-sell-price {
-  text-align: right; }
-.view .views-field {
-  white-space: nowrap;
-  text-overflow: ellipsis; }
+/* From entity_print defaults. */
+.page {
+  padding: 20px; }
+  .page img {
+    max-width: 100%;
+    height: auto; }
+  .page td img {
+    max-width: none; }
 
-/*# sourceMappingURL=style.css.map */
+th {
+  border-bottom: 1px solid grey;
+  padding-bottom: 3px; }
+
+tr {
+  vertical-align: top; }
+
+/* Debugging */
+.entity-print-se-invoice,
+.entity-print-se-quote {
+  line-height: 1.2; }
+  .entity-print-se-invoice .logo,
+  .entity-print-se-quote .logo {
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin-right: .75rem; }
+    .entity-print-se-invoice .logo img,
+    .entity-print-se-quote .logo img {
+      width: 90px;
+      height: 90px;
+      float: left; }
+  .entity-print-se-invoice .details,
+  .entity-print-se-quote .details {
+    text-align: right; }
+    .entity-print-se-invoice .details h1,
+    .entity-print-se-quote .details h1 {
+      font-size: 1.5rem;
+      font-weight: bold; }
+  .entity-print-se-invoice .bill-to,
+  .entity-print-se-quote .bill-to {
+    text-align: left;
+    clear: both;
+    padding-left: 100px;
+    padding-bottom: 2em; }
+  .entity-print-se-invoice .info-pane table,
+  .entity-print-se-quote .info-pane table {
+    width: auto; }
+  .entity-print-se-invoice .bank-details,
+  .entity-print-se-quote .bank-details {
+    text-align: left;
+    clear: right;
+    float: left; }
+  .entity-print-se-invoice .contact-details,
+  .entity-print-se-quote .contact-details {
+    text-align: right;
+    clear: none;
+    float: right; }
+
+/* Hide things we don't want to display */
+.field--name-se-sent {
+  display: none; }
+
+.print__wrapper {
+  display: none; }
+
+/* The main line item information */
+.se-bill .field, .se-goods-receipt .field, .se-invoice .field, .se-payment .field, .se-purchase-order .field, .se-quote .field, .se-ticket .field {
+  display: flex;
+  display: -webkit-box;
+  align-content: space-between;
+  -webkit-justify-content: space-between; }
+  .se-bill .field .field__label, .se-goods-receipt .field .field__label, .se-invoice .field .field__label, .se-payment .field .field__label, .se-purchase-order .field .field__label, .se-quote .field .field__label, .se-ticket .field .field__label {
+    width: 5rem; }
+  .se-bill .field .field__item, .se-goods-receipt .field .field__item, .se-invoice .field .field__item, .se-payment .field .field__item, .se-purchase-order .field .field__item, .se-quote .field .field__item, .se-ticket .field .field__item {
+    width: 10rem; }
+.se-bill .layout--twocol .layout__region--top, .se-goods-receipt .layout--twocol .layout__region--top, .se-invoice .layout--twocol .layout__region--top, .se-payment .layout--twocol .layout__region--top, .se-purchase-order .layout--twocol .layout__region--top, .se-quote .layout--twocol .layout__region--top, .se-ticket .layout--twocol .layout__region--top {
+  width: 100%;
+  padding: 5px; }
+.se-bill .layout--twocol .layout__middle, .se-goods-receipt .layout--twocol .layout__middle, .se-invoice .layout--twocol .layout__middle, .se-payment .layout--twocol .layout__middle, .se-purchase-order .layout--twocol .layout__middle, .se-quote .layout--twocol .layout__middle, .se-ticket .layout--twocol .layout__middle {
+  width: 100%;
+  display: flex;
+  display: -webkit-box;
+  align-content: space-between;
+  -webkit-justify-content: space-between; }
+  .se-bill .layout--twocol .layout__middle .layout__region--first, .se-goods-receipt .layout--twocol .layout__middle .layout__region--first, .se-invoice .layout--twocol .layout__middle .layout__region--first, .se-payment .layout--twocol .layout__middle .layout__region--first, .se-purchase-order .layout--twocol .layout__middle .layout__region--first, .se-quote .layout--twocol .layout__middle .layout__region--first, .se-ticket .layout--twocol .layout__middle .layout__region--first {
+    width: 48%; }
+  .se-bill .layout--twocol .layout__middle .layout__region--second, .se-goods-receipt .layout--twocol .layout__middle .layout__region--second, .se-invoice .layout--twocol .layout__middle .layout__region--second, .se-payment .layout--twocol .layout__middle .layout__region--second, .se-purchase-order .layout--twocol .layout__middle .layout__region--second, .se-quote .layout--twocol .layout__middle .layout__region--second, .se-ticket .layout--twocol .layout__middle .layout__region--second {
+    width: 48%; }
+.se-bill .layout--twocol .layout__region--bottom, .se-goods-receipt .layout--twocol .layout__region--bottom, .se-invoice .layout--twocol .layout__region--bottom, .se-payment .layout--twocol .layout__region--bottom, .se-purchase-order .layout--twocol .layout__region--bottom, .se-quote .layout--twocol .layout__region--bottom, .se-ticket .layout--twocol .layout__region--bottom {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column; }
+  .se-bill .layout--twocol .layout__region--bottom table, .se-goods-receipt .layout--twocol .layout__region--bottom table, .se-invoice .layout--twocol .layout__region--bottom table, .se-payment .layout--twocol .layout__region--bottom table, .se-purchase-order .layout--twocol .layout__region--bottom table, .se-quote .layout--twocol .layout__region--bottom table, .se-ticket .layout--twocol .layout__region--bottom table {
+    width: 100%;
+    margin-bottom: 0;
+    border-spacing: 0; }
+    .se-bill .layout--twocol .layout__region--bottom table tr, .se-goods-receipt .layout--twocol .layout__region--bottom table tr, .se-invoice .layout--twocol .layout__region--bottom table tr, .se-payment .layout--twocol .layout__region--bottom table tr, .se-purchase-order .layout--twocol .layout__region--bottom table tr, .se-quote .layout--twocol .layout__region--bottom table tr, .se-ticket .layout--twocol .layout__region--bottom table tr {
+      margin-bottom: 1rem; }
+      .se-bill .layout--twocol .layout__region--bottom table tr th, .se-bill .layout--twocol .layout__region--bottom table tr td, .se-goods-receipt .layout--twocol .layout__region--bottom table tr th, .se-goods-receipt .layout--twocol .layout__region--bottom table tr td, .se-invoice .layout--twocol .layout__region--bottom table tr th, .se-invoice .layout--twocol .layout__region--bottom table tr td, .se-payment .layout--twocol .layout__region--bottom table tr th, .se-payment .layout--twocol .layout__region--bottom table tr td, .se-purchase-order .layout--twocol .layout__region--bottom table tr th, .se-purchase-order .layout--twocol .layout__region--bottom table tr td, .se-quote .layout--twocol .layout__region--bottom table tr th, .se-quote .layout--twocol .layout__region--bottom table tr td, .se-ticket .layout--twocol .layout__region--bottom table tr th, .se-ticket .layout--twocol .layout__region--bottom table tr td {
+        padding: 0; }
+      .se-bill .layout--twocol .layout__region--bottom table tr th.notes, .se-bill .layout--twocol .layout__region--bottom table tr td.notes, .se-goods-receipt .layout--twocol .layout__region--bottom table tr th.notes, .se-goods-receipt .layout--twocol .layout__region--bottom table tr td.notes, .se-invoice .layout--twocol .layout__region--bottom table tr th.notes, .se-invoice .layout--twocol .layout__region--bottom table tr td.notes, .se-payment .layout--twocol .layout__region--bottom table tr th.notes, .se-payment .layout--twocol .layout__region--bottom table tr td.notes, .se-purchase-order .layout--twocol .layout__region--bottom table tr th.notes, .se-purchase-order .layout--twocol .layout__region--bottom table tr td.notes, .se-quote .layout--twocol .layout__region--bottom table tr th.notes, .se-quote .layout--twocol .layout__region--bottom table tr td.notes, .se-ticket .layout--twocol .layout__region--bottom table tr th.notes, .se-ticket .layout--twocol .layout__region--bottom table tr td.notes {
+        width: 50%; }
+  .se-bill .layout--twocol .layout__region--bottom .field, .se-goods-receipt .layout--twocol .layout__region--bottom .field, .se-invoice .layout--twocol .layout__region--bottom .field, .se-payment .layout--twocol .layout__region--bottom .field, .se-purchase-order .layout--twocol .layout__region--bottom .field, .se-quote .layout--twocol .layout__region--bottom .field, .se-ticket .layout--twocol .layout__region--bottom .field {
+    display: flex;
+    display: -webkit-flex; }
+  .se-bill .layout--twocol .layout__region--bottom .field--name-se-outstanding,
+  .se-bill .layout--twocol .layout__region--bottom .field--name-se-tax,
+  .se-bill .layout--twocol .layout__region--bottom .field--name-se-total, .se-goods-receipt .layout--twocol .layout__region--bottom .field--name-se-outstanding,
+  .se-goods-receipt .layout--twocol .layout__region--bottom .field--name-se-tax,
+  .se-goods-receipt .layout--twocol .layout__region--bottom .field--name-se-total, .se-invoice .layout--twocol .layout__region--bottom .field--name-se-outstanding,
+  .se-invoice .layout--twocol .layout__region--bottom .field--name-se-tax,
+  .se-invoice .layout--twocol .layout__region--bottom .field--name-se-total, .se-payment .layout--twocol .layout__region--bottom .field--name-se-outstanding,
+  .se-payment .layout--twocol .layout__region--bottom .field--name-se-tax,
+  .se-payment .layout--twocol .layout__region--bottom .field--name-se-total, .se-purchase-order .layout--twocol .layout__region--bottom .field--name-se-outstanding,
+  .se-purchase-order .layout--twocol .layout__region--bottom .field--name-se-tax,
+  .se-purchase-order .layout--twocol .layout__region--bottom .field--name-se-total, .se-quote .layout--twocol .layout__region--bottom .field--name-se-outstanding,
+  .se-quote .layout--twocol .layout__region--bottom .field--name-se-tax,
+  .se-quote .layout--twocol .layout__region--bottom .field--name-se-total, .se-ticket .layout--twocol .layout__region--bottom .field--name-se-outstanding,
+  .se-ticket .layout--twocol .layout__region--bottom .field--name-se-tax,
+  .se-ticket .layout--twocol .layout__region--bottom .field--name-se-total {
+    justify-content: flex-end;
+    -webkit-box-pack: end;
+    border-bottom: 1px solid #ccc; }
+    .se-bill .layout--twocol .layout__region--bottom .field--name-se-outstanding .field__item,
+    .se-bill .layout--twocol .layout__region--bottom .field--name-se-tax .field__item,
+    .se-bill .layout--twocol .layout__region--bottom .field--name-se-total .field__item, .se-goods-receipt .layout--twocol .layout__region--bottom .field--name-se-outstanding .field__item,
+    .se-goods-receipt .layout--twocol .layout__region--bottom .field--name-se-tax .field__item,
+    .se-goods-receipt .layout--twocol .layout__region--bottom .field--name-se-total .field__item, .se-invoice .layout--twocol .layout__region--bottom .field--name-se-outstanding .field__item,
+    .se-invoice .layout--twocol .layout__region--bottom .field--name-se-tax .field__item,
+    .se-invoice .layout--twocol .layout__region--bottom .field--name-se-total .field__item, .se-payment .layout--twocol .layout__region--bottom .field--name-se-outstanding .field__item,
+    .se-payment .layout--twocol .layout__region--bottom .field--name-se-tax .field__item,
+    .se-payment .layout--twocol .layout__region--bottom .field--name-se-total .field__item, .se-purchase-order .layout--twocol .layout__region--bottom .field--name-se-outstanding .field__item,
+    .se-purchase-order .layout--twocol .layout__region--bottom .field--name-se-tax .field__item,
+    .se-purchase-order .layout--twocol .layout__region--bottom .field--name-se-total .field__item, .se-quote .layout--twocol .layout__region--bottom .field--name-se-outstanding .field__item,
+    .se-quote .layout--twocol .layout__region--bottom .field--name-se-tax .field__item,
+    .se-quote .layout--twocol .layout__region--bottom .field--name-se-total .field__item, .se-ticket .layout--twocol .layout__region--bottom .field--name-se-outstanding .field__item,
+    .se-ticket .layout--twocol .layout__region--bottom .field--name-se-tax .field__item,
+    .se-ticket .layout--twocol .layout__region--bottom .field--name-se-total .field__item {
+      text-align: right; }
+
+/*# sourceMappingURL=print.css.map */

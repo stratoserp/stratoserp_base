@@ -7,16 +7,12 @@
 //@import "../../contrib/bootstrap4/scss/style";
 
 // OR test new Bootstrap 4.5.0
-@import '/code/web/themes/contrib/bootstrap4/scss/style.scss';
+@import 'overrides/bootstrap_path';
 
 // Include custom sub theme.
 @import 'custom/variables';
 
-// Include custom sub theme.
-//@import 'custom/mixins/misc';
-//@import 'custom/misc';
-
-// Ensure that the list of extra function buttons dpes the right thing.
+// Ensure that the list of extra function buttons does the right thing.
 .block-stratoserp {
   .item-list {
     li {
@@ -36,10 +32,22 @@
   }
 }
 
+div#edit-actions {
+  .btn, a.button {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 // Fix weird spacing issue with bootstrap4/Drupal 9
 div.vertical-tabs__panes {
   display: inline-block;
   width: 100%;
+}
+
+/* Stop the 'Remove' buttons on forms being on a new line */
+td .form-item {
+  display: inline-block;
 }
 
 // Add some blank space at the top of the page.
@@ -77,9 +85,24 @@ div.vertical-tabs__panes {
 .layout--twocol {
   .layout__region {
     padding: 5px;
+
+    // Hide the table drag row weights prompt.
+    .tabledrag-toggle-weight-wrapper {
+      display: none;
+    }
   }
   .layout__region--top {
     padding: 0;
+  }
+  .layout__middle {
+    display: flex;
+    width: 100%;
+    .layout__region--first,
+    .layout__region--second {
+      flex-grow: 1;
+      white-space: normal;
+      width: 50%;
+    }
   }
   .layout__region--bottom {
     mark {
@@ -94,6 +117,35 @@ div.vertical-tabs__panes {
     section article:nth-of-type(even) { background-color:#fff; }
     section article footer .layout--onecol {
       padding: 0;
+    }
+
+    #se-item-lines-add-more-wrapper,
+    #se-payment-lines-add-more-wrapper {
+      // Button region
+      > div > div.clearfix {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        .field-add-more-submit,
+        .field-recalculate-submit {
+          margin: 0 16px 0 0;
+        }
+      }
+
+    }
+
+    table .btn {
+      height: 40px;
+    }
+
+    .field--type-se-currency {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      label, input {
+        display: inline-flex;
+      }
     }
   }
 }
@@ -137,50 +189,29 @@ div.vertical-tabs__panes {
 nav {
   .toolbar-tab {
     // Icon for system menu entry.
-    .toolbar-icon-toolbar-menu-stratoserp::before {
+    .toolbar-icon-toolbar-menu-stratoserp:before {
       background-image: url(../icons/stratoserp.svg);
     }
   }
 
   .toolbar-menu {
-    ::before {
-      position: absolute;
-      top: 0;
-      left: 0.6667em;
-      display: block;
-      width: 20px;
-      height: 100%;
-      content: "";
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      background-position: center center;
-      background-size: 100% auto;
-    }
-
     // Icons for StratosERP entries.
-    .toolbar-icon-link-toolbar-menu-stratoserp-home::before {
+    .toolbar-icon-link-toolbar-menu-stratoserp-home:before {
       background-image: url(../icons/house.svg);
     }
-    .toolbar-icon-link-toolbar-menu-views-view-views-se-customer-list-page-1::before {
-      background-image: url(../icons/person.svg);
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-customer-list-se-customer-list:before {
+      background-image: url(../icons/people.svg);
     }
-    .toolbar-icon-link-toolbar-menu-views-view-views-se-information-list-page-1::before {
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-item-list-se-item-list:before {
+      background-image: url(../icons/puzzlepiece.svg);
+    }
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-supplier-list-se-supplier-list:before {
       background-image: url(../icons/file.svg);
     }
-    .toolbar-icon-link-toolbar-menu-views-view-views-se-item-list-page-1::before {
-      background-image: url(../icons/puzzlepiece.svg);
-    }
-    .toolbar-icon-link-toolbar-menu-views-view-views-se-stock-item-list-page-1::before {
-      background-image: url(../icons/puzzlepiece.svg);
-    }
-    .toolbar-icon-link-toolbar-menu-views-view-views-se-supplier-list-page-1::before {
-      background-image: url(../icons/person.svg);
-    }
-    .toolbar-icon-link-toolbar-menu-views-view-views-se-ticket-list-page-1::before {
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-ticket-list-se-ticket-list:before {
       background-image: url(../icons/wrench.svg);
     }
-    .toolbar-icon-link-toolbar-menu-views-view-views-se-timekeeping-list-page-1::before {
+    .toolbar-icon-link-toolbar-menu-views-view-views-se-timekeeping-list-se-timekeeping-list:before {
       background-image: url(../icons/cog.svg);
     }
   }

@@ -24,3 +24,9 @@ regions:
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
   footer: 'Footer'
+
+entity_print:
+  se_invoice:
+    all: 'stratoserp_theme/print'
+  se_quote:
+    all: 'stratoserp_theme/print'
