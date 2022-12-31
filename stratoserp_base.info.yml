@@ -41,10 +41,12 @@ dependencies:
   - admin_toolbar
   - admin_toolbar_tools
   - chartjs_api
+  - colorbox
   - core_event_dispatcher
   - date_popup
   - duration_field
   - dynamic_entity_reference
+  - entity_print
   - extra_field
   - eva
   - field_group

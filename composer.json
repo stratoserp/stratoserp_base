@@ -21,6 +21,7 @@
         "drupal/bootstrap4": "^2.1",
         "drupal/chartjs_api": "^1.1",
         "drupal/core": "^9 || ^10",
+        "drupal/colorbox": "^2.0",
         "drupal/duration_field": "^2.0",
         "drupal/dynamic_entity_reference": "^3.0",
         "drupal/entity_print": "^2.5",
