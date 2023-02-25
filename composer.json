@@ -21,8 +21,10 @@
         "drupal/bootstrap4": "^2.1",
         "drupal/chartjs_api": "^1.1",
         "drupal/core": "^9 || ^10",
+        "drupal/colorbox": "^2.0",
         "drupal/duration_field": "^2.0",
         "drupal/dynamic_entity_reference": "^3.0",
+        "drupal/entity_print": "^2.5",
         "drupal/eva": "^3.0",
         "drupal/extra_field": "^2.3",
         "drupal/field_group": "^3.4",
@@ -37,6 +39,7 @@
         "drupal/username_enumeration_prevention": "^1.2",
         "drupal/views_bulk_operations": "^4.0",
         "drupal/webform": "^6.1",
+        "drupal/workflows_field": "^2.0@alpha",
         "drush/drush": "^11",
         "singularo/shepherd-drupal-scaffold": "dev-develop"
     },
